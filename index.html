@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Insite App</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="js/routie.js"></script>
-<script src="js/navigation.js"></script>
-<script>
-$(function(){
-  navigation();
-});
-</script>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="css/animate.css" type="text/css">
-<link rel="stylesheet" href="css/app.css" type="text/css">
+  <title>Insite App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="js/routie.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  $(function(){
+    navigation();
+    app();
+  });
+  </script>
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"  type="text/css">
+  <link href="css/animate.css" rel="stylesheet"  type="text/css">
+  <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <div class="hero">
@@ -48,9 +51,118 @@ $(function(){
     </ul>
 </nav>
 <div id="shuttle" class="container">
-<section id="departures" class="animated fadeIn">
-  <h2>A Header!<span class="glyphicon glyphicon-time" aria-hidden="true"></span></h2>
-  <div id="board"></div>
+<section id="x" class="animated fadeIn">
+  <h2>GSA Apps</h2>
+  <div class="panel panel-default">
+    <div class="list-group" id="apps-list">
+      <a class="list-group-item" href="#" data-pinned="false">
+        <div class="row">
+          <div class="col-sm-1">
+            <img src="img/icons/secureauth.png"/>
+          </div>
+          <div class="col-sm-5">
+            <i class="fa fa-3x fa-building-o pull-left"></i>
+            <h4 class="list-group-item-heading">SecureAuth OTP</h4>
+
+          </div>
+          <div class="col-sm-5">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
+          </div>
+          <div class="col-xs-1 star-pin">
+            <span class="star-pin-off">☆</span>
+            <span class="star-pin-on">★</span>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item" href="#" data-pinned="false">
+        <div class="row">
+          <div class="col-sm-1">
+            <img src="img/icons/1800fshuttle.png"/>
+          </div>
+          <div class="col-sm-5">
+            <i class="fa fa-3x fa-building-o pull-left"></i>
+            <h4 class="list-group-item-heading">1800F Shuttle</h4>
+          </div>
+          <div class="col-sm-5">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
+          </div>
+          <div class="col-xs-1 star-pin">
+            <span class="star-pin-off">☆</span>
+            <span class="star-pin-on">★</span>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item" href="#" data-pinned="false">
+        <div class="row">
+          <div class="col-sm-1">
+            <img src="img/icons/mgsagov.png"/>
+          </div>
+          <div class="col-sm-5">
+            <h4 class="list-group-item-heading">m.gsa.gov</h4>
+          </div>
+          <div class="col-sm-5">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
+          </div>
+          <div class="col-xs-1 star-pin">
+            <span class="star-pin-off">☆</span>
+            <span class="star-pin-on">★</span>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item" href="#" data-pinned="false">
+        <div class="row">
+          <div class="col-sm-1">
+            <img src="img/icons/anyconnect.png"/>
+          </div>
+          <div class="col-sm-5">
+            <h4 class="list-group-item-heading">AnyConnect VPN</h4>
+          </div>
+          <div class="col-sm-5">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
+          </div>
+          <div class="col-xs-1 star-pin">
+            <span class="star-pin-off">☆</span>
+            <span class="star-pin-on">★</span>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item" href="#" data-pinned="false">
+        <div class="row">
+          <div class="col-sm-1">
+            <img src="img/icons/myatt.png"/>
+          </div>
+          <div class="col-sm-5">
+            <h4 class="list-group-item-heading">MyAT&amp;T</h4>
+          </div>
+          <div class="col-sm-5">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
+          </div>
+          <div class="col-xs-1 star-pin">
+            <span class="star-pin-off">☆</span>
+            <span class="star-pin-on">★</span>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item" href="#" data-pinned="false">
+        <div class="row">
+          <div class="col-sm-1">
+            <img src="img/icons/adobeconnect.png"/>
+          </div>
+          <div class="col-sm-5">
+            <i class="fa fa-3x fa-building-o pull-left"></i>
+            <h4 class="list-group-item-heading">Adobe Connect</h4>
+          </div>
+          <div class="col-sm-5">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
+          </div>
+          <div class="col-xs-1 star-pin">
+            <span class="star-pin-off">☆</span>
+            <span class="star-pin-on">★</span>
+          </div>
+        </div>
+      </a>
+    </div>
+</div>
 <br>
 <button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>
 </section>
