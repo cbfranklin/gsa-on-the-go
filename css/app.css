@@ -73,7 +73,7 @@ h2 .glyphicon {
     float: right;
 }
 .hero {
-    background: #337AB7;
+    background: #263092;
     color: #ededed;
     font-size: 22px;
     width: 20%;
@@ -100,14 +100,14 @@ h2 .glyphicon {
     padding-right: 10px;
 }
 .hero.blurred {
-    color: #337AB7;
+    color: #263092;
     background: #ededed;
 }
 .hero.blurred a {
-    color: #337AB7;
+    color: #263092;
 }
 .nav-secondary {
-    background: #337AB7;
+    background: #263092;
     color: #ededed;
     overflow: hidden;
 }
@@ -133,7 +133,7 @@ h2 .glyphicon {
     font-size: 20px;
 }
 .nav-secondary li:hover {
-    background: #2D86DB;
+    background: #263092;
 }
 .nav-secondary a {
     color: #fff;
@@ -180,7 +180,7 @@ nav.active {
     top: 0;
     left: 0;
     height: 60px;
-    background: #2D86DB;
+    background:#263092;
     -webkit-box-shadow: 0px 0px 3px -1px rgba(125, 125, 125, 1);
     -moz-box-shadow: 0px 0px 3px -1px rgba(125, 125, 125, 1);
     box-shadow: 0px 0px 3px -1px rgba(125, 125, 125, 1);
@@ -203,7 +203,7 @@ nav ul {
 }
 .nav-secondary li {
     width: 100%;
-    border-bottom: 1px solid #2D86DB;
+    border-bottom: 1px solid #263092;
 }
 .nav-secondary {
     position: fixed;
@@ -234,7 +234,7 @@ nav ul {
     position: absolute;
     top: 12px;
     left: 10px;
-    color: #337AB7;
+    color: #263092;
 }
 .drawer-open .hero:hover::before {
     color: #fff;
@@ -244,14 +244,14 @@ nav ul {
     position: absolute;
     top: 18px;
     right: 10px;
-    color: #2D86DB;
+    color: #263092;
 }
 .nav-primary li::before {
     content: '\25B6';
     position: absolute;
     top: 13px;
     right: 10px;
-    color: #337AB7;
+    color: #263092;
     width: auto;
     height: auto;
     border: none;
@@ -337,7 +337,7 @@ a:hover {
     text-decoration: none!important;
 }
 #apps-list img{
-    height:24px;
+    height:32px;
     width:auto;
 }
 .star-pin{
@@ -360,4 +360,25 @@ a:hover {
 }
 #apps-list a[data-pinned=false] .star-pin .star-pin-off{
     display:block;
+}
+#intro{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:#263092;
+    display:none;
+    color:#fff;
+    z-index:1000;
+}
+#intro div{
+    width:96%;
+    height:96%;
+    text-align:center;
+    vertical-align: middle;
+    padding:2%;
+}
+#intro div img{
+    display:inline;
 }

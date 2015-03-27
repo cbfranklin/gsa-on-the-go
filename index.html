@@ -8,23 +8,49 @@
   <script src="js/lib/routie.js"></script>
   <script src="js/lib/toe.min.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="lib/slick/slick/slick.min.js"></script>
   <script src="js/app.js"></script>
   <script>
   $(function(){
     navigation();
     app();
+    intro();
   });
   </script>
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"  type="text/css">
+  <link href="lib/slick/slick/slick.css" rel="stylesheet" type="text/css">
   <link href="css/animate.css" rel="stylesheet"  type="text/css">
   <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div id="intro">
+  <div>
+    <h1>Hello!</h1>
+    <p>This is a tool, or a widget, but definitely not an app, which will hopefully serve as your one-stop-shop for internal GSA apps and resources.</p>
+    <img src="lib/gestures/Swipe_Left.png">
+  </div>
+  <div>
+    <h2>Features</h2>
+    <p>Are there features? You bet! Here's like, a picture of one!</p>
+    <br>
+    <img src="img/screenshot.png" style="width:100%;height:auto"/>
+    <hr>
+    <p>You can even do other stuff:</p>
+    <br>
+    <img src="img/screenshot2.png" style="width:100%;height:auto"/>
+
+  </div>
+  <div>
+    <h2>Got it?</h2>
+    <p>We just wanted to say: <em>"good luck, we're all counting on you."</em></p>
+    <a id="intro-close" class="btn btn-primary btn-lg" href="#" role="button">Got it.</a>
+    </div>
+</div>
   <div class="hero">
     <div class="hero-inner">Insite App</div>
     <div class="hero-insite">
       <a href="http://insite.gsa.gov">
-        <button type="button" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>InSite</button>
+        <!--<button type="button" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>InSite</button>-->
       </a>
     </div>
         <a class="menu-toggle">
@@ -51,7 +77,7 @@
       <li data-nav="x"><span>Navigation 3<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span></li>
     </ul>
 </nav>
-<div id="shuttle" class="container">
+<div class="container">
 <section id="x" class="animated fadeIn">
   <h2>GSA Apps</h2>
   <Br>

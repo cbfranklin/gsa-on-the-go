@@ -1,5 +1,5 @@
 function navigation() {
-    routie('/:nav', function(nav){
+    /*routie('/:nav', function(nav){
         if($('section#'+nav)){
             $('section').hide();
             $('section#'+nav).show().addClass('animated');
@@ -8,7 +8,7 @@ function navigation() {
         else{
             routie('/departures');
         }
-    });
+    });*/
 
     $("nav li,.nav-secondary > div").hover(
         function() {

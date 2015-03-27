@@ -1,3 +1,15 @@
+function intro(){
+    $('#intro').show().slick({
+      dots: false,
+      arrows: false,
+      infinite: false
+    });
+    $('body').css({'overflow-y':'hidden',"height":"100%","position":"relative"});
+    $('#intro-close').on('click',function(){
+        $('#intro').hide();
+        console.log('close')
+    })
+}
 function app(){
     $('.star-pin').on('click',function(){
         if($(this).parents('.list-group-item').attr('data-pinned') === 'false'){
