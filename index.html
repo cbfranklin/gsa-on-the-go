@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="js/routie.js"></script>
+  <script src="js/lib/routie.js"></script>
+  <script src="js/lib/toe.min.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/app.js"></script>
   <script>
@@ -53,22 +54,32 @@
 <div id="shuttle" class="container">
 <section id="x" class="animated fadeIn">
   <h2>GSA Apps</h2>
+  <Br>
+  <div class="btn-group" data-toggle="buttons" style="margin:0 auto">
+  <label class="btn btn-default active">
+    <input type="radio" name="options" id="pie-chart" autocomplete="off" checked> <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>Launcher
+  </label>
+  <label class="btn btn-default">
+    <input type="radio" name="options" id="bar-chart" autocomplete="off"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> Downloads
+  </label>
+</div>
+<hr>
   <div class="panel panel-default">
     <div class="list-group" id="apps-list">
       <a class="list-group-item" href="#" data-pinned="false">
         <div class="row">
-          <div class="col-sm-1">
+          <div class="col-xs-2">
             <img src="img/icons/secureauth.png"/>
           </div>
-          <div class="col-sm-5">
+          <div class="col-xs-7">
             <i class="fa fa-3x fa-building-o pull-left"></i>
             <h4 class="list-group-item-heading">SecureAuth OTP</h4>
 
           </div>
-          <div class="col-sm-5">
-            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
-          </div>
-          <div class="col-xs-1 star-pin">
+          <!--<div class="col-xs-2 col-download">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true">&nbsp;</span>&nbsp;</button>
+          </div>-->
+          <div class="col-xs-3 star-pin">
             <span class="star-pin-off">☆</span>
             <span class="star-pin-on">★</span>
           </div>
@@ -76,17 +87,17 @@
       </a>
       <a class="list-group-item" href="#" data-pinned="false">
         <div class="row">
-          <div class="col-sm-1">
+          <div class="col-xs-2">
             <img src="img/icons/1800fshuttle.png"/>
           </div>
-          <div class="col-sm-5">
+          <div class="col-xs-7">
             <i class="fa fa-3x fa-building-o pull-left"></i>
             <h4 class="list-group-item-heading">1800F Shuttle</h4>
           </div>
-          <div class="col-sm-5">
-            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
-          </div>
-          <div class="col-xs-1 star-pin">
+          <!--<div class="col-xs-2 col-download">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true">&nbsp;</span></button>
+          </div>-->
+          <div class="col-xs-3 star-pin">
             <span class="star-pin-off">☆</span>
             <span class="star-pin-on">★</span>
           </div>
@@ -94,16 +105,16 @@
       </a>
       <a class="list-group-item" href="#" data-pinned="false">
         <div class="row">
-          <div class="col-sm-1">
+          <div class="col-xs-2">
             <img src="img/icons/mgsagov.png"/>
           </div>
-          <div class="col-sm-5">
+          <div class="col-xs-7">
             <h4 class="list-group-item-heading">m.gsa.gov</h4>
           </div>
-          <div class="col-sm-5">
-            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
-          </div>
-          <div class="col-xs-1 star-pin">
+          <!--<div class="col-xs-2 col-download">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true">&nbsp;</span></button>
+          </div>-->
+          <div class="col-xs-3 star-pin">
             <span class="star-pin-off">☆</span>
             <span class="star-pin-on">★</span>
           </div>
@@ -111,16 +122,16 @@
       </a>
       <a class="list-group-item" href="#" data-pinned="false">
         <div class="row">
-          <div class="col-sm-1">
+          <div class="col-xs-2">
             <img src="img/icons/anyconnect.png"/>
           </div>
-          <div class="col-sm-5">
+          <div class="col-xs-7">
             <h4 class="list-group-item-heading">AnyConnect VPN</h4>
           </div>
-          <div class="col-sm-5">
-            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
-          </div>
-          <div class="col-xs-1 star-pin">
+          <!--<div class="col-xs-2 col-download">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true">&nbsp;</span></button>
+          </div>-->
+          <div class="col-xs-3 star-pin">
             <span class="star-pin-off">☆</span>
             <span class="star-pin-on">★</span>
           </div>
@@ -128,16 +139,16 @@
       </a>
       <a class="list-group-item" href="#" data-pinned="false">
         <div class="row">
-          <div class="col-sm-1">
+          <div class="col-xs-2">
             <img src="img/icons/myatt.png"/>
           </div>
-          <div class="col-sm-5">
+          <div class="col-xs-7">
             <h4 class="list-group-item-heading">MyAT&amp;T</h4>
           </div>
-          <div class="col-sm-5">
-            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
-          </div>
-          <div class="col-xs-1 star-pin">
+          <!--<div class="col-xs-2 col-download">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true">&nbsp;</span></button>
+          </div>-->
+          <div class="col-xs-3 star-pin">
             <span class="star-pin-off">☆</span>
             <span class="star-pin-on">★</span>
           </div>
@@ -145,17 +156,17 @@
       </a>
       <a class="list-group-item" href="#" data-pinned="false">
         <div class="row">
-          <div class="col-sm-1">
+          <div class="col-xs-2">
             <img src="img/icons/adobeconnect.png"/>
           </div>
-          <div class="col-sm-5">
+          <div class="col-xs-7">
             <i class="fa fa-3x fa-building-o pull-left"></i>
             <h4 class="list-group-item-heading">Adobe Connect</h4>
           </div>
-          <div class="col-sm-5">
-            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</button>
-          </div>
-          <div class="col-xs-1 star-pin">
+          <!--<div class="col-xs-2 col-download">
+            <button class="btn btn-default btn-download"><span class="glyphicon glyphicon-download" aria-hidden="true">&nbsp;</span></button>
+          </div>-->
+          <div class="col-xs-3 star-pin">
             <span class="star-pin-off">☆</span>
             <span class="star-pin-on">★</span>
           </div>
@@ -164,7 +175,7 @@
     </div>
 </div>
 <br>
-<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>
+<!--<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>-->
 </section>
 
 

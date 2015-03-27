@@ -337,8 +337,8 @@ a:hover {
     text-decoration: none!important;
 }
 #apps-list img{
-    height:32px;
-    width:32px;
+    height:24px;
+    width:auto;
 }
 .star-pin{
     display:table-cell;

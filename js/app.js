@@ -31,3 +31,7 @@ function sortAppList(){
 
     $listli.detach().appendTo($list);
 }
+
+$('body').on('swipe','xxx',function(event){
+    var dir = event.direction;
+});
