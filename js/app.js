@@ -6,8 +6,8 @@ function intro(){
     });
     $('body').css({'overflow-y':'hidden',"height":"100%","position":"relative"});
     $('#intro-close').on('click',function(){
-        $('#intro').hide();
-        console.log('close')
+        $('#intro').addClass('animated fadeOutUpBig')
+        $('body').css({'overflow-y':'auto',"height":"auto"});
     })
 }
 function app(){
