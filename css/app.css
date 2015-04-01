@@ -367,12 +367,12 @@ a:hover {
     left:0;
     width:100%;
     height:100%;
-    background-color:#263092;
     display:none;
     color:#fff;
     z-index:1000;
+    background-color:#263092;
 }
-#intro  div{
+#intro div{
     width:96%;
     height:96%;
     text-align:center;
@@ -381,6 +381,15 @@ a:hover {
 }
 #intro div img{
     display:inline;
+}
+#intro .slide-one{
+    background-color:#263092;
+}
+#intro .slide-two{
+    background-color:#263092;
+}
+#intro .slide-three{
+    background-color:#263092;
 }
 .btn-group-options .btn .glyphicon{
     float:none;
@@ -407,6 +416,10 @@ a:hover {
     width:auto;
     top:0;
     left:0;
+}
+.app-info img.icon{
+    width:64px;
+    height:auto;
 }
 .app-info-body{
 }

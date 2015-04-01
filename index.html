@@ -4,7 +4,7 @@
   <title>GSA Employee Resources</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="apple-itunes-app" content="app-id=430437503">
+  <!--<meta name="apple-itunes-app" content="app-id=430437503">-->
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="js/lib/routie.js"></script>
   <script src="js/lib/toe.min.js"></script>
@@ -27,27 +27,35 @@
 </head>
 <body>
 <div id="intro">
-  <div>
-    <h1>Hello!</h1>
-    <p>This is a tool, or a widget, but definitely not an app, which will hopefully serve as your one-stop-shop for internal GSA apps and resources.</p>
+  <div class="slide-one">
+    <div>
+    <h1>GSA Employee Mobile Resources</h1>
+    <p>We've assembled a complete set of tools you can use on smartphones and tablets to get work done on the go.</p>
     <img src="lib/gestures/Swipe_Left.png">
   </div>
-  <div>
-    <h2>Features</h2>
-    <p>Are there features? You bet! Here's like, a picture of one!</p>
+  </div>
+  <div class="slide-two">
+    <div>
+    <h2>Get what you need from your App Store</h2>
+    <ul>
+      <li><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download third-party apps from an approved list</li>
+      <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Configure using instructions for GSA settings</li>
+    </ul>
     <br>
     <img src="img/screenshot.png" style="width:100%;max-width:480px;height:auto"/>
     <hr>
     <p>You can even do other stuff:</p>
     <br>
     <img src="img/screenshot2.png" style="width:100%;max-width:480px;height:auto"/>
-
   </div>
-  <div>
+  </div>
+  <div class="slide-three">
+    <div>
     <h2>Got it?</h2>
     <p>We just wanted to say: <em>"good luck, we're all counting on you."</em></p>
     <button id="intro-close" class="btn btn-primary btn-lg" href="#" role="button">Got it.</button>
     </div>
+  </div>
 </div>
   <div class="hero">
     <div class="hero-inner">GSA Employee Resources</div>
@@ -112,7 +120,7 @@
     {{#app}}
     <div class="app-info">
     <div class="row app-info-header">
-      <div class="col-xs-4 col-sm-2"><a href="{{download-link}}"><img src="{{icon}}"></a></div>
+      <div class="col-xs-4 col-sm-2"><a href="{{download-link}}"><img class="icon" src="{{icon}}"></a></div>
       <div class="col-xs-8 col-sm-10"><h3><a href="{{download-link}}">{{display-name}}</a></h3></div>
     </div>
     <hr>
