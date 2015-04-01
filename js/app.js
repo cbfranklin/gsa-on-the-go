@@ -6,11 +6,10 @@ function intro(){
       infinite: false
     });
     $('body').css({'overflow-y':'hidden',"height":"100%","position":"relative"});
-    $('#intro-close').on('click',function(e){
+    $('#intro-close').on('click',function(){
         $('#intro').addClass('animated fadeOutUpBig')
         $('body').css({'overflow-y':'auto',"height":"auto"});
         router.navigate('/apps');
-        e.preventDefault();
     })
 }
 function app(){
@@ -102,19 +101,21 @@ var isMobile = {
 function platformSpecific(){
     if(isMobile.Android()){
         for(i in apps){
-            apps[i]['link-download'] = apps[i]['link-download']['android'];
+            if(apps[i]['link-download']){
+                apps[i]['link-download'] = apps[i]['link-download']['android'];
+            }
         }
-    }
     else if(isMobile.iOS()){
         for(i in apps){
-            if(apps[i]['link-download'])
-            apps[i]['link-download'] = apps[i]['link-download']['ios'];
+            if(apps[i]['link-download']){
+                apps[i]['link-download'] = apps[i]['link-download']['ios'];
+            }
         }
     }
     else{
         for(i in apps){
             apps[i]['link-download'] = null;
          }
-    }
+    }*/
 }
 
