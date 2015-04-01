@@ -6,13 +6,15 @@ function intro(){
       infinite: false
     });
     $('body').css({'overflow-y':'hidden',"height":"100%","position":"relative"});
-    $('#intro-close').on('click',function(){
+    $('#intro-close').on('click',function(e){
         $('#intro').addClass('animated fadeOutUpBig')
         $('body').css({'overflow-y':'auto',"height":"auto"});
         router.navigate('/apps');
+        e.preventDefault();
     })
 }
 function app(){
+    intro();
     console.log('app')
     /*$('.star-pin').on('click',function(){
         if($(this).parents('.list-group-item').attr('data-pinned') === 'false'){
@@ -105,6 +107,7 @@ function platformSpecific(){
     }
     else if(isMobile.iOS()){
         for(i in apps){
+            if(apps[i]['link-download'])
             apps[i]['link-download'] = apps[i]['link-download']['ios'];
         }
     }
