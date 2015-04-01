@@ -3,7 +3,8 @@ function intro(){
     $('#intro').show().slick({
       dots: false,
       arrows: false,
-      infinite: false
+      infinite: false,
+      mobileFirst: true,
     });
     $('body').css({'overflow-y':'hidden',"height":"100%","position":"relative"});
     $('#intro-close').on('click',function(){

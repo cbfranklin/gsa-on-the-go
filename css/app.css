@@ -370,14 +370,24 @@ a:hover {
     display:none;
     color:#fff;
     z-index:1000;
-    background-color:#263092;
+    background-color:#333;
+}
+.slick-list,
+.slick-track,
+.slick-slide > div{
+    height:100%;
 }
 #intro div{
-    width:96%;
-    height:96%;
+    /*width:96%;
+    height:96%;*/
     text-align:center;
     vertical-align: middle;
-    padding:2%;
+    padding:1%;
+}
+#intro .slick-slide > div{
+    height:100%;
+    width:97%;
+    overflow:hidden;
 }
 #intro ul{
     margin:0 auto;
@@ -385,19 +395,19 @@ a:hover {
     padding:0;
 }
 #intro ul li{
-
+    list-style-position: inside
 }
 #intro div img{
     display:inline;
 }
-#intro .slide-one{
+#intro .slide-one {
     background-color:#263092;
 }
-#intro .slide-two{
-    background-color:#263092;
+#intro .slide-two {
+    background-color:#286090;
 }
-#intro .slide-three{
-    background-color:#263092;
+#intro .slide-three {
+    background-color:#31B0D5;
 }
 #intro .glyphicon{
     float:none;
