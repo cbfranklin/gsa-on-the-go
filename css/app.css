@@ -379,6 +379,13 @@ a:hover {
     vertical-align: middle;
     padding:2%;
 }
+#intro ul{
+    margin:0 auto;
+    max-width:480px;
+}
+#intro ul li{
+
+}
 #intro div img{
     display:inline;
 }
@@ -390,6 +397,9 @@ a:hover {
 }
 #intro .slide-three{
     background-color:#263092;
+}
+#intro .glyphicon{
+    float:none;
 }
 .btn-group-options .btn .glyphicon{
     float:none;

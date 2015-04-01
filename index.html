@@ -38,21 +38,19 @@
     <div>
     <h2>Get what you need from your App Store</h2>
     <ul>
-      <li><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download third-party apps from an approved list</li>
-      <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Configure using instructions for GSA settings</li>
+      <li>Download third-party apps from an approved list ( <span class="glyphicon glyphicon-download" aria-hidden="true"></span> )</li>
+      <li>Configure using instructions for GSA settings ( <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> )</li>
     </ul>
-    <br>
-    <img src="img/screenshot.png" style="width:100%;max-width:480px;height:auto"/>
-    <hr>
-    <p>You can even do other stuff:</p>
-    <br>
-    <img src="img/screenshot2.png" style="width:100%;max-width:480px;height:auto"/>
   </div>
   </div>
   <div class="slide-three">
     <div>
-    <h2>Got it?</h2>
-    <p>We just wanted to say: <em>"good luck, we're all counting on you."</em></p>
+    <h2>Launch your GSA tools <span class="glyphicon glyphicon-open" aria-hidden="true"></span></h2>
+    <ul>
+      <li>Link to GSA mobile widgets and sites</li>
+      <li>Start up your apps <em>(must be installed first)</em></li>
+    </ul>
+    <br>
     <button id="intro-close" class="btn btn-primary btn-lg" href="#" role="button">Got it.</button>
     </div>
   </div>
@@ -111,7 +109,7 @@
     <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
       {{#link-download}}<a target="_blank" href="{{link-download}}" role="button" class="btn btn-success"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></a>{{/link-download}}
       <a href="#/apps/{{name}}" role="button" class="btn btn-info"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
-      <a target="_blank" href="{{link}}" role="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+      <a target="_blank" href="{{link}}" role="button" class="btn btn-primary"><span class="glyphicon glyphicon-open" aria-hidden="true"></span></a>
     </div>
   </div>
   {{/apps}}
@@ -126,7 +124,7 @@
     <hr>
     <div class="app-info-body">{{info}}</div>
     <hr>
-    <a target="_blank" href="{{link}}" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>Launch</a>
+    <a target="_blank" href="{{link}}" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-open" aria-hidden="true"></span>Launch</a>
     {{#link-download}}<a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</a>{{/link-download}}
     <a href="#/apps" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>App List</a>
     </div>
