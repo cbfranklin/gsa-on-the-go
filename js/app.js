@@ -105,6 +105,7 @@ function platformSpecific(){
                 apps[i]['link-download'] = apps[i]['link-download']['android'];
             }
         }
+    }
     else if(isMobile.iOS()){
         for(i in apps){
             if(apps[i]['link-download']){
