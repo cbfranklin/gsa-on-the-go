@@ -117,6 +117,6 @@ function platformSpecific(){
         for(i in apps){
             apps[i]['link-download'] = null;
          }
-    }*/
+    }
 }
 
