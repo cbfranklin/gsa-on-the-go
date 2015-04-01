@@ -11,7 +11,7 @@ function intro(){
     })
 }
 function app(){
-    $('.star-pin').on('click',function(){
+    /*$('.star-pin').on('click',function(){
         if($(this).parents('.list-group-item').attr('data-pinned') === 'false'){
             $(this).parents('.list-group-item').attr('data-pinned',true)
         }
@@ -19,7 +19,7 @@ function app(){
             $(this).parents('.list-group-item').attr('data-pinned',false)
         }
         sortAppList();
-    });
+    });*/
 }
 
 function sortAppList(){
@@ -44,6 +44,6 @@ function sortAppList(){
     $listli.detach().appendTo($list);
 }
 
-$('body').on('swipe','xxx',function(event){
+/*$('body').on('swipe','xxx',function(event){
     var dir = event.direction;
-});
+});*/

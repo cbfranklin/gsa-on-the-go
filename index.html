@@ -4,6 +4,7 @@
   <title>Insite App</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-itunes-app" content="app-id=430437503">
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="js/lib/routie.js"></script>
   <script src="js/lib/toe.min.js"></script>
@@ -12,9 +13,9 @@
   <script src="js/app.js"></script>
   <script>
   $(function(){
+    intro();
     navigation();
     app();
-    intro();
   });
   </script>
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"  type="text/css">
@@ -80,17 +81,15 @@
 <div class="container">
 <section id="x" class="animated fadeIn">
   <h2>GSA Apps</h2>
-  <Br>
-  <div class="btn-group" data-toggle="buttons" style="margin:0 auto">
+  <!--<div class="btn-group" data-toggle="buttons" style="margin:0 auto">
   <label class="btn btn-default active">
     <input type="radio" name="options" id="pie-chart" autocomplete="off" checked> <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>Launcher
   </label>
   <label class="btn btn-default">
     <input type="radio" name="options" id="bar-chart" autocomplete="off"><span class="glyphicon glyphicon-download" aria-hidden="true"></span> Downloads
   </label>
-</div>
-<hr>
-<div class="panel panel-default">
+</div>-->
+<!--<div class="panel panel-default">
     <div class="list-group" id="apps-list">
       <a class="list-group-item" href="#" data-pinned="false">
        <img style="height:32px;width:auto" src="img/icons/secureauth.png"/>
@@ -98,12 +97,32 @@
       </a>
       
     </div>
+</div>-->
+<div class="app-list-item">
+  <a target="_blank" href="connectpro://" roll="button" class="btn btn-default btn-block btn-lg btn-app-name">
+    <img src="img/icons/adobeconnect.png"/>Adobe Connect
+  </a>
+  <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
+    <a role="button" class="btn btn-success"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></a>
+    <a role="button" class="btn btn-info"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+    <a role="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+  </div>
 </div>
 <div class="app-list-item">
-  <a roll="button" class="btn btn-default btn-block btn-lg">
-    <img style="height:32px;width:auto" src="img/icons/secureauth.png"/>SecureAuth OTP
+  <a target="_blank" href="http://insite.gsa.gov/resources/apps/1800f-shuttle" roll="button" class="btn btn-default btn-block btn-lg btn-app-name">
+    <img src="img/icons/secureauth.png"/>SecureAuth OTP
   </a>
-  <div class="btn-group btn-group-justified btn-group-options" role="group">
+  <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
+    <a role="button" class="btn btn-success"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></a>
+    <a role="button" class="btn btn-info"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+    <a role="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+  </div>
+</div>
+<div class="app-list-item">
+  <a roll="button" class="btn btn-default btn-block btn-lg btn-app-name">
+    <img src="img/icons/secureauth.png"/>SecureAuth OTP
+  </a>
+  <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
     <a role="button" class="btn btn-success"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></a>
     <a role="button" class="btn btn-info"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
     <a role="button" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
