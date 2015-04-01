@@ -118,5 +118,22 @@ function platformSpecific(){
             apps[i]['link-download'] = null;
          }
     }
+
+    if(isMobile.any()){
+        console.log('ismobile')
+        for(i in apps){
+            if(typeof apps[i].link === 'object'){
+                apps[i]['link'] = apps[i]['link']['mobile']
+            }
+        }
+    }
+    else{
+        console.log('isntmobile')
+        for(i in apps){
+            if(typeof apps[i].link === 'object'){
+                apps[i]['link'] = apps[i]['link']['desktop']
+            }
+        }
+    }
 }
 

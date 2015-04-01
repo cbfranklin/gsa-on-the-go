@@ -3,7 +3,10 @@ var apps = [
 		"name":"adobe-connect",
 		"display-name":"Adobe Connect",
 		"icon":"img/icons/adobeconnect.png",
-		"link":"connectpro://",
+		"link":{
+			"mobile":"connectpro://meet.gsa.gov",
+			"desktop":"http://meet.gsa.gov"
+		},
 		"link-download": {
 			"ios":"https://itunes.apple.com/us/app/adobe-connect-mobile/id430437503?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=air.com.adobe.connectpro&hl=en"
