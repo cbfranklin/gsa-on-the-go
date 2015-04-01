@@ -120,7 +120,6 @@ function platformSpecific(){
     }
 
     if(isMobile.any()){
-        console.log('ismobile')
         for(i in apps){
             if(typeof apps[i].link === 'object'){
                 apps[i]['link'] = apps[i]['link']['mobile']
@@ -128,7 +127,6 @@ function platformSpecific(){
         }
     }
     else{
-        console.log('isntmobile')
         for(i in apps){
             if(typeof apps[i].link === 'object'){
                 apps[i]['link'] = apps[i]['link']['desktop']
