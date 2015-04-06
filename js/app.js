@@ -12,6 +12,10 @@ function intro(){
         $('body').css({'overflow-y':'auto',"height":"auto"});
         router.navigate('/apps');
     })
+    $('body').on('click','.app-list-item',function(e){
+        $(this).toggleClass('open').children('.btn-app-details').toggle();
+        e.preventDefault()
+    });
 }
 function app(){
     intro();

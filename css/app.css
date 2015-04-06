@@ -420,9 +420,29 @@ a:hover {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
+.btn-app-details{
+    display:none;
+}
+.app-list-open-closed{
+    position: absolute;
+    top: 20%;
+    right: 10px;
+}
+.app-list-open-closed .open,
+.app-list-item.open .closed{
+    display:none;
+}
+.app-list-item.open .open{
+    display:block;
+}
 .btn-app-options > .btn{
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+}
+.btn-app-text{
+    padding:5px;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
 }
 .app-list-item .btn{
     position:relative
@@ -442,4 +462,7 @@ a:hover {
 }
 .hero-inner{
     font-size:18px;
+}
+.app-list-toggle{
+    float:right;
 }

@@ -107,12 +107,21 @@
   {{#apps}}
   <div class="app-list-item {{name}}">
     <a target="_blank" href="{{link}}" roll="button" class="btn btn-default btn-block btn-lg btn-app-name">
-      <img src="{{icon}}"/>{{display-name}}
+      <img src="{{icon}}"/>
+      {{display-name}}
+      <div class='app-list-open-closed'>
+        <div class="open">^</div><div class="closed">v</div>
+      </div>
     </a>
-    <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
-      {{#link-download}}<a target="_blank" href="{{link-download}}" role="button" class="btn btn-success"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></a>{{/link-download}}
-      <a href="#/apps/{{name}}" role="button" class="btn btn-info"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
-      <!--<a target="_blank" href="{{link}}" role="button" class="btn btn-primary"><span class="glyphicon glyphicon-open" aria-hidden="true"></span></a>-->
+    <div class="btn-app-details">
+      <div class="btn-app-text">
+        {{info}}
+      </div>
+      <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
+        {{#link-download}}<a target="_blank" href="{{link-download}}" role="button" class="btn btn-success">Download</a>{{/link-download}}
+        <a href="#/apps/{{name}}" role="button" class="btn btn-info">Info</a>
+        <a target="_blank" href="{{link}}" role="button" class="btn btn-primary">Open</span></a>
+      </div>
     </div>
   </div>
   {{/apps}}
