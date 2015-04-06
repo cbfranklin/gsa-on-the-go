@@ -13,7 +13,7 @@ function intro(){
         router.navigate('/apps');
     })
     $('body').on('click','.app-list-item',function(e){
-        $(this).toggleClass('open').children('.btn-app-details').toggle();
+        $(this).toggleClass('open')
         e.preventDefault()
     });
 }

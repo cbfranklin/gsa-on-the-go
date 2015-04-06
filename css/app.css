@@ -423,6 +423,9 @@ a:hover {
 .btn-app-details{
     display:none;
 }
+.app-list-item.open .btn-app-details{
+    display:block;
+}
 .app-list-open-closed{
     position: absolute;
     top: 20%;
@@ -440,7 +443,7 @@ a:hover {
     border-top-right-radius: 0px;
 }
 .btn-app-text{
-    padding:5px;
+    padding:10px;
     border-left:1px solid #ccc;
     border-right:1px solid #ccc;
 }
