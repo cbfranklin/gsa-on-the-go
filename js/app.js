@@ -12,8 +12,8 @@ function intro(){
         $('body').css({'overflow-y':'auto',"height":"auto"});
         router.navigate('/apps');
     })
-    $('body').on('click','.app-list-item',function(e){
-        $(this).toggleClass('open')
+    $('body').on('click','.btn-app-name',function(e){
+        $(this).parent().toggleClass('open')
         e.preventDefault()
     });
 }
