@@ -2,6 +2,7 @@ var apps = [
 	{
 		"name":"adobe-connect",
 		"display-name":"Adobe Connect",
+		"summary":"GSA Meetings",
 		"icon":"img/icons/adobeconnect.png",
 		"link":{
 			"mobile":"connectpro://meet.gsa.gov",
@@ -16,6 +17,7 @@ var apps = [
 	{
 		"name":"gsa-mobile",
 		"display-name":"GSA Mobile",
+		"summary":"m.gsa.gov",
 		"icon":"img/icons/mgsagov.png",
 		"link":"http://m.gsa.gov",
 		"link-download":null,
@@ -24,6 +26,7 @@ var apps = [
 	{
 		"name":"1800f-shuttle",
 		"display-name":"1800F Shuttle",
+		"summary":"Shuttle Schedule",
 		"icon":"img/icons/1800fshuttle.png",
 		"link":"http://insite.gsa.gov/resources/apps/1800f-shuttle",
 		"link-download":null,

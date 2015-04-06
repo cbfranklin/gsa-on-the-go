@@ -463,6 +463,7 @@ a:hover {
 .hero-inner{
     font-size:18px;
 }
-.app-list-toggle{
-    float:right;
+
+.app-list-item small{
+    display: block;
 }
