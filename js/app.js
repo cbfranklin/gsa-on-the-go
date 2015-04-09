@@ -26,16 +26,10 @@ function app(){
         sortAppList();
     });*/
 
+
     platformSpecific();
 
-    router = new Grapnel();
-    router.get('',function(req){
-        intro();
-    })
-    router.get('/apps', function(req){
-        $('section').hide();
-        $('#app-list-page').show();
-        var rendered_html = Mustache.to_html($('#templates .app-list').html(),{
+    var rendered_html = Mustache.to_html($('#templates .app-list').html(),{
            apps:apps
         });
         $('#app-list').html(rendered_html);
@@ -44,6 +38,14 @@ function app(){
             $(this).parent().toggleClass('open')
             e.preventDefault()
         });
+
+    router = new Grapnel();
+    router.get('',function(req){
+        intro();
+    })
+    router.get('/apps', function(req){
+        $('section').hide();
+        $('#app-list-page').show();
     });
 
     router.get('/apps/:name', function(req){
