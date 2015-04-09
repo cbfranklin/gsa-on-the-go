@@ -13,6 +13,7 @@ function intro(){
         router.navigate('/apps');
     })
     $('body').on('click','.btn-app-name',function(e){
+        console.log('btn-app-name')
         $(this).parent().toggleClass('open')
         e.preventDefault()
     });

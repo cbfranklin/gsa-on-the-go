@@ -408,6 +408,10 @@ a:hover {
 #intro .glyphicon{
     float:none;
 }
+#intro p,
+#intro li{
+    font-size:16px;
+}
 .btn-group-options .btn .glyphicon{
     float:none;
     display:inline;
@@ -452,7 +456,7 @@ a:hover {
 }
 .app-list-item img{
     position:absolute;
-    height:45px;
+    height:100%;
     width:auto;
     top:0;
     left:0;
