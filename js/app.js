@@ -12,11 +12,6 @@ function intro(){
         $('body').css({'overflow-y':'auto',"height":"auto"});
         router.navigate('/apps');
     })
-    $('body').on('click','.btn-app-name',function(e){
-        console.log('btn-app-name')
-        $(this).parent().toggleClass('open')
-        e.preventDefault()
-    });
 }
 function app(){
     intro();
@@ -44,6 +39,11 @@ function app(){
            apps:apps
         });
         $('#app-list').html(rendered_html);
+        $('body').on('click','.btn-app-name',function(e){
+            console.log('btn-app-name')
+            $(this).parent().toggleClass('open')
+            e.preventDefault()
+        });
     });
 
     router.get('/apps/:name', function(req){
