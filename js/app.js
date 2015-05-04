@@ -46,7 +46,6 @@ function app(){
     router.get('/apps', function(req){
         $('section').hide();
         $('#app-list-page').show();
-<<<<<<< HEAD
         var rendered_html = Mustache.to_html($('#templates .swipe-list').html(),{
            apps:apps
         });
@@ -60,8 +59,6 @@ function app(){
          adaptiveHeight: true,
          infinite: true,
         });
-=======
->>>>>>> origin/master
     });
 
     router.get('/apps/:name', function(req){
