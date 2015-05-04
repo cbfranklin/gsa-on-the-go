@@ -14,8 +14,6 @@ function intro(){
     })
 }
 function app(){
-    intro();
-    console.log('app')
     /*$('.star-pin').on('click',function(){
         if($(this).parents('.list-group-item').attr('data-pinned') === 'false'){
             $(this).parents('.list-group-item').attr('data-pinned',true)
@@ -40,10 +38,14 @@ function app(){
         });
 
     router = new Grapnel();
+    router.get('/',function(req){
+        intro();
+    })
     router.get('',function(req){
         intro();
     })
     router.get('/apps', function(req){
+        $('#intro').hide();
         $('section').hide();
         $('#app-list-page').show();
         var rendered_html = Mustache.to_html($('#templates .swipe-list').html(),{
