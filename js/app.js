@@ -39,10 +39,19 @@ function app(){
     router.get('/apps', function(req){
         $('section').hide();
         $('#app-list-page').show();
-        var rendered_html = Mustache.to_html($('#templates .app-list').html(),{
+        var rendered_html = Mustache.to_html($('#templates .swipe-list').html(),{
            apps:apps
         });
-        $('#app-list').html(rendered_html);
+        $('#swipe-list,#swipe-list-2').html(rendered_html).slick({
+          dots: false,
+          arrows: false,
+          infinite: false,
+          mobileFirst: true,
+          slidesToShow: 3,
+        slidesToScroll: 3,
+         adaptiveHeight: true,
+         infinite: true,
+        });
     });
 
     router.get('/apps/:name', function(req){

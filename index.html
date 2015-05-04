@@ -16,7 +16,7 @@
   <script src="js/app.js"></script>
   <script>
   $(function(){
-    //navigation();
+    navigation();
     app();
   });
   </script>
@@ -84,16 +84,19 @@
       </div>
   <nav>
     <ul class="nav-primary">
-      <li data-nav="x"><span>Navigation<span class="glyphicon glyphicon-time" aria-hidden="true"></span></span></li>
-      <li data-nav="x"><span>Navigation 2<span class="glyphicon glyphicon-search" aria-hidden="true"></span></span></li>
-      <li data-nav="x"><span>Navigation 3<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span></li>
+      <li data-nav="x"><span>Insite<!--<span class="glyphicon glyphicon-time" aria-hidden="true"></span>--></span></li>
+      <!--<li data-nav="x"><span>Navigation 2<span class="glyphicon glyphicon-search" aria-hidden="true"></span></span></li>-->
+      <!--<li data-nav="x"><span>Navigation 3<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span></li>-->
     </ul>
 </nav>
 <div class="container">
 <section id="app-list-page" class="animated fadeIn">
   <h2>Apps</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<div id="app-list"></div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<h4>App List Header</h4>
+<div id="swipe-list"></div>
+<h4>App List 2 Header</h4>
+<div id="swipe-list-2"></div>
 <br>
 <!--<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>-->
 </section>
@@ -103,7 +106,7 @@
 </div>
 
 <div id="templates">
-  <script type="template" class="app-list">
+  <!--<script type="template" class="app-list">
   {{#apps}}
   <div class="app-list-item {{name}}">
     <a target="_blank" href="{{link}}" roll="button" class="btn btn-default btn-block btn-lg btn-app-name">
@@ -120,10 +123,19 @@
       </div>
       <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
         {{#link-download}}<a target="_blank" href="{{link-download}}" role="button" class="btn btn-success">Download</a>{{/link-download}}
-        <!--<a href="#/apps/{{name}}" role="button" class="btn btn-info">Info</a>-->
         <a target="_blank" href="{{link}}" role="button" class="btn btn-primary">Open</span></a>
       </div>
     </div>
+  </div>
+  {{/apps}}
+  </script>-->
+  <script type="template" class="swipe-list">
+  {{#apps}}
+  <div class="swipe-list-item {{name}}">
+    <a target="_blank" href="{{link}}" role="button">
+      <img src="{{icon}}"/>
+      <small>{{display-name}}</small>
+      </a>
   </div>
   {{/apps}}
   </script>
