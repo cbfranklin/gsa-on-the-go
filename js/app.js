@@ -12,10 +12,6 @@ function intro(){
         $('body').css({'overflow-y':'auto',"height":"auto"});
         router.navigate('/apps');
     })
-    $('body').on('click','.btn-app-name',function(e){
-        $(this).parent().toggleClass('open')
-        e.preventDefault()
-    });
 }
 function app(){
     intro();
@@ -30,7 +26,18 @@ function app(){
         sortAppList();
     });*/
 
+
     platformSpecific();
+
+    var rendered_html = Mustache.to_html($('#templates .app-list').html(),{
+           apps:apps
+        });
+        $('#app-list').html(rendered_html);
+        $('body').on('click','.btn-app-name',function(e){
+            console.log('btn-app-name')
+            $(this).parent().toggleClass('open')
+            e.preventDefault()
+        });
 
     router = new Grapnel();
     router.get('',function(req){
@@ -39,6 +46,7 @@ function app(){
     router.get('/apps', function(req){
         $('section').hide();
         $('#app-list-page').show();
+<<<<<<< HEAD
         var rendered_html = Mustache.to_html($('#templates .swipe-list').html(),{
            apps:apps
         });
@@ -52,6 +60,8 @@ function app(){
          adaptiveHeight: true,
          infinite: true,
         });
+=======
+>>>>>>> origin/master
     });
 
     router.get('/apps/:name', function(req){
