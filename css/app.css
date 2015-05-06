@@ -474,3 +474,22 @@ a:hover {
 .app-list-item small{
     display: block;
 }
+#swipe-list{
+    height:100px;
+}
+#swipe-list .slick-list{
+    height:100px;
+}
+.swipe-list-item{
+    width:60px;
+    height:auto;
+    display:block;
+    overflow:hidden;
+}
+.swipe-list-item a{
+    display:block;
+}
+.swipe-list-item img{
+    width:60px;
+    height:auto;
+}
