@@ -1,0 +1,16 @@
+Here is list of web app/sites:
+
+    ALOHA (leave request)
+    BookIT! (room rescheduling)
+    Employee Express (payroll)
+    FEDdesk (time & attendance)
+    Salesforce (access all apps)
+
+Here is list of All Apps:
+
+
+    MyView (horizon)
+    SA OTP (one time passcode) - need it for VPN access
+    BookIT
+    Adobe Connect
+    GSA Per Diem
