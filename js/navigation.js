@@ -1,14 +1,4 @@
 function navigation() {
-    /*routie('/:nav', function(nav){
-        if($('section#'+nav)){
-            $('section').hide();
-            $('section#'+nav).show().addClass('animated');
-            window.scrollTo(0,0);
-        }
-        else{
-            routie('/departures');
-        }
-    });*/
 
     $("nav li,.nav-secondary > div").hover(
         function() {
@@ -54,11 +44,5 @@ function navigation() {
         $('nav').removeClass('active');
         $('.menu-toggle').removeClass('active');
     })
-    /* TEMP */
-    /*$('.nav-secondary li').on('click',function(){
-        $('.menu-toggle').removeClass('active');
-        $('nav').removeClass('active');
-        $('.nav-secondary').removeClass('active');
-        $('.nav-primary li').removeClass('active');
-    });*/
+
 };
