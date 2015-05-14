@@ -27,13 +27,36 @@ function app() {
             arrows: false,
             infinite: false,
             mobileFirst: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            /*slidesToShow: 3,
+            slidesToScroll: 3,*/
             adaptiveHeight: true,
             infinite: true,
+            responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4
+      }
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }
+  ]
         });
         }
-                $('#app-list-page').show();
+        $('#app-list-page').show();
     });
 router.get('/', function(req) {
         router.navigate('');
