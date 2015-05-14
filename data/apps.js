@@ -56,17 +56,25 @@ var apps = [
 		"link-download":null
 	},
 	{
-		"name":"feddesk",
-		"display-name":"FEDdesk",
-		"icon":"",
+		"name":"aloha",
+		"display-name":"ALOHA",
+		"icon":"img/icons/aloha.png",
 		"link":"",
 		"link-download":null
 	},
 	{
 		"name":"employee-express",
 		"display-name":"Employee Express",
-		"icon":"",
+		"icon":"img/icons/employee_express.png",
+		"link":"",
+		"link-download":null
+	},	
+	{
+		"name":"feddesk",
+		"display-name":"FEDdesk",
+		"icon":"img/icons/feddesk.png",
 		"link":"",
 		"link-download":null
 	}
+	
 ]
