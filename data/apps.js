@@ -54,5 +54,19 @@ var apps = [
 		"icon":"img/icons/1800fshuttle.png",
 		"link":"",
 		"link-download":null
+	},
+	{
+		"name":"feddesk",
+		"display-name":"FEDdesk",
+		"icon":"",
+		"link":"",
+		"link-download":null
+	},
+	{
+		"name":"employee-express",
+		"display-name":"Employee Express",
+		"icon":"",
+		"link":"",
+		"link-download":null
 	}
 ]
