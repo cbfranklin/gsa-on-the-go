@@ -67,6 +67,9 @@ function app() {
     router.get('/', function(req) {
         router.navigate('');
     })
+     router.get('/apps', function(req) {
+        router.navigate('');
+    })
     router.get('/apps/:name', function(req) {
         $('section').hide();
         $('#app-info-page').show();
