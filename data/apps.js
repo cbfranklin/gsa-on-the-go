@@ -4,7 +4,6 @@ var apps = [
 		"display-name":"Mobile GSA.gov",
 		"icon":"img/icons/mgsa.png",
 		"link":"http://m.gsa.gov/m/",
-		"link-download":null,
 		"is-site":true
 	},
 	{
@@ -12,7 +11,6 @@ var apps = [
 		"display-name":"1800F Shuttle",
 		"icon":"img/icons/1800fshuttle.png",
 		"link":"https://insite.gsa.gov/resources/apps/1800f-shuttle/",
-		"link-download":null,
 		"is-site":true
 	},
 	{
@@ -20,7 +18,6 @@ var apps = [
 		"display-name":"ALOHA",
 		"icon":"img/icons/aloha.png",
 		"link":"https://aloha.gsa.gov/",
-		"link-download":null,
 		"is-site":true
 	},
 	{
@@ -28,7 +25,6 @@ var apps = [
 		"display-name":"Employee Express",
 		"icon":"img/icons/employee_express.png",
 		"link":"https://www.employeeexpress.gov/",
-		"link-download":null,
 		"is-site":true
 	},	
 	{
@@ -36,14 +32,16 @@ var apps = [
 		"display-name":"FEDdesk",
 		"icon":"img/icons/feddesk.png",
 		"link":"http://feddesk.gsa.gov/",
-		"link-download":null,
 		"is-site":true
 	},
 	{
 		"name":"adobe-connect",
 		"display-name":"Adobe Connect",
 		"icon":"img/icons/adobe_connect.jpg",
-		"link":"",
+		"link-download": {
+			"ios":"",
+			"android":""
+		},
 		"link-download":null
 	},
 	{
@@ -57,8 +55,10 @@ var apps = [
 		"name":"bookit",
 		"display-name":"BookIt",
 		"icon":"img/icons/BookIt.jpg",
-		"link":"",
-		"link-download":null
+		"link-download": {
+			"ios":"",
+			"android":""
+		}
 	},
 	{
 		"name":"gsa-perdiem",
@@ -71,21 +71,27 @@ var apps = [
 		"name":"myview",
 		"display-name":"MyView",
 		"icon":"img/icons/VMware_cropped.jpg",
-		"link":"",
-		"link-download":null
+		"link-download": {
+			"ios":"",
+			"android":""
+		}
 	},
 	{
 		"name":"salesforce",
 		"display-name":"Salesforce",
 		"icon":"img/icons/Salesforce_cropped.jpg",
-		"link":"",
-		"link-download":null
+		"link-download": {
+			"ios":"",
+			"android":""
+		}
 	},
 	{
 		"name":"secureauth-otp",
 		"display-name":"SecureAuth OTP",
 		"icon":"img/icons/Secureauth.png",
-		"link":"",
-		"link-download":null
+		"link-download": {
+			"ios":"",
+			"android":""
+		}
 	},
 ]
