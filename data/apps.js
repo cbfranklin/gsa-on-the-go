@@ -4,35 +4,40 @@ var apps = [
 		"display-name":"Mobile GSA.gov",
 		"icon":"img/icons/mgsa.png",
 		"link":"http://m.gsa.gov/m/",
-		"link-download":null
+		"link-download":null,
+		"is-site":true
 	},
 	{
 		"name":"1800f-shuttle",
 		"display-name":"1800F Shuttle",
 		"icon":"img/icons/1800fshuttle.png",
 		"link":"https://insite.gsa.gov/resources/apps/1800f-shuttle/",
-		"link-download":null
+		"link-download":null,
+		"is-site":true
 	},
 	{
 		"name":"aloha",
 		"display-name":"ALOHA",
 		"icon":"img/icons/aloha.png",
 		"link":"https://aloha.gsa.gov/",
-		"link-download":null
+		"link-download":null,
+		"is-site":true
 	},
 	{
 		"name":"employee-express",
 		"display-name":"Employee Express",
 		"icon":"img/icons/employee_express.png",
 		"link":"https://www.employeeexpress.gov/",
-		"link-download":null
+		"link-download":null,
+		"is-site":true
 	},	
 	{
 		"name":"feddesk",
 		"display-name":"FEDdesk",
 		"icon":"img/icons/feddesk.png",
 		"link":"http://feddesk.gsa.gov/",
-		"link-download":null
+		"link-download":null,
+		"is-site":true
 	},
 	{
 		"name":"adobe-connect",

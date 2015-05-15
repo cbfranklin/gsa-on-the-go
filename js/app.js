@@ -17,48 +17,54 @@ function app() {
     router = new Grapnel();
     router.get('', function(req) {
         $('section').hide();
-        if($('#swipe-list').is(':empty')){
-                    var rendered_html = Mustache.to_html($('#templates .swipe-list').html(), {
-            apps: apps
-        });
-            $('#swipe-list,#swipe-list-2').html(rendered_html);
-        $('#swipe-list,#swipe-list-2').slick({
-            dots: false,
-            arrows: false,
-            infinite: false,
-            mobileFirst: true,
-            /*slidesToShow: 3,
-            slidesToScroll: 3,*/
-            adaptiveHeight: true,
-            infinite: true,
-            responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5,
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4
-      }
-    },
-    {
-      breakpoint: 320,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    }
-  ]
-        });
+        if ($('#swipe-list').is(':empty')) {
+            var list_sites = apps.filter(function(obj){
+                return obj['is-site'] == true;
+            })
+            var list_apps = apps.filter(function(obj){
+                return !obj['is-site'];
+            })
+            var rendered_list_1 = Mustache.to_html($('#templates .swipe-list').html(), {
+                apps: list_apps
+            });
+            var rendered_list_2 = Mustache.to_html($('#templates .swipe-list').html(), {
+                apps: list_sites
+            });
+            $('#swipe-list').html(rendered_list_1);
+            $('#swipe-list-2').html(rendered_list_2);
+            $('#swipe-list,#swipe-list-2').slick({
+                dots: false,
+                arrows: false,
+                infinite: false,
+                mobileFirst: true,
+                /*slidesToShow: 3,
+                slidesToScroll: 3,*/
+                adaptiveHeight: true,
+                infinite: true,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 5,
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                    }
+                }, {
+                    breakpoint: 320,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                }]
+            });
         }
         $('#app-list-page').show();
     });
-router.get('/', function(req) {
+    router.get('/', function(req) {
         router.navigate('');
     })
     router.get('/apps/:name', function(req) {
@@ -73,10 +79,7 @@ router.get('/', function(req) {
         });
         $('#app-info-page').html(rendered_html);
         var req = 'app-info/' + findByName[0].name + '.html';
-        $('.app-info-body').load(req, function() {
-            console.log('did it')
-            console.log(data)
-        });
+        $('.app-info-body').load(req);
     });
 }
 

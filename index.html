@@ -25,38 +25,6 @@
   <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="intro">
-  <div class="slide-one">
-    <div>
-    <h3>GSA Employee Mobile Resources</h3>
-    <hr>
-    <p>We've assembled a complete set of tools you can use on smartphones and tablets to get work done on the go.</p>
-    <img src="lib/gestures/Swipe_Left.png">
-  </div>
-  </div>
-  <div class="slide-two">
-    <div>
-    <h3>Get what you need from your App Store</h3>
-    <hr>
-    <ul>
-      <li>Download apps from an approved list </li>
-      <li>Configure using GSA settings </li>
-    </ul>
-  </div>
-  </div>
-  <div class="slide-three">
-    <div>
-    <h3>Launch your GSA tools </h3>
-    <hr>
-    <ul>
-      <li>Link to GSA mobile widgets and sites</li>
-      <li>Start up your apps <em>(must be installed first)</em></li>
-    </ul>
-    <br>
-    <button id="intro-close" class="btn btn-primary btn-lg" href="#" role="button">Got it.</button>
-    </div>
-  </div>
-</div>
   <div class="hero">
     <div class="hero-inner">GSA Employee Resources</div>
     <div class="hero-insite">
@@ -83,7 +51,7 @@
       </div>
   <nav>
     <ul class="nav-primary">
-      <li data-nav="x"><span>Insite<!--<span class="glyphicon glyphicon-time" aria-hidden="true"></span>--></span></li>
+      <li data-nav="x"><span>InSite<!--<span class="glyphicon glyphicon-time" aria-hidden="true"></span>--></span></li>
       <!--<li data-nav="x"><span>Navigation 2<span class="glyphicon glyphicon-search" aria-hidden="true"></span></span></li>-->
       <!--<li data-nav="x"><span>Navigation 3<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span></li>-->
     </ul>
@@ -92,9 +60,9 @@
 <section id="app-list-page" class="animated fadeIn">
   <h2>Apps</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<h4>App List Header</h4>
+<h4>Apps</h4>
 <div id="swipe-list"></div>
-<h4>App List 2 Header</h4>
+<h4>Sites</h4>
 <div id="swipe-list-2"></div>
 <br>
 <!--<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>-->
@@ -105,33 +73,10 @@
 </div>
 
 <div id="templates">
-  <!--<script type="template" class="app-list">
-  {{#apps}}
-  <div class="app-list-item {{name}}">
-    <a target="_blank" href="{{link}}" roll="button" class="btn btn-default btn-block btn-lg btn-app-name">
-      <img src="{{icon}}"/>
-      {{display-name}}
-      <small>{{summary}}</small>
-      <div class='app-list-open-closed'>
-        <div class="open">^</div><div class="closed">v</div>
-      </div>
-    </a>
-    <div class="btn-app-details">
-      <div class="btn-app-text">
-        {{info}}
-      </div>
-      <div class="btn-group btn-group-justified btn-group-options btn-app-options" role="group">
-        {{#link-download}}<a target="_blank" href="{{link-download}}" role="button" class="btn btn-success">Download</a>{{/link-download}}
-        <a target="_blank" href="{{link}}" role="button" class="btn btn-primary">Open</span></a>
-      </div>
-    </div>
-  </div>
-  {{/apps}}
-  </script>-->
   <script type="template" class="swipe-list">
   {{#apps}}
   <div class="swipe-list-item {{name}}">
-    <a href="#/apps/{{name}}" role="button">
+    <a {{#is-site}}href="{{link}}" target="_blank"{{/is-site}}{{^is-site}}href="#/apps/{{name}}"{{/is-site}} role="button">
       <img src="{{icon}}"/>
       <small>{{display-name}}</small>
       </a>
@@ -142,14 +87,14 @@
     {{#app}}
     <div class="app-info">
     <div class="row app-info-header">
-      <div class="col-xs-4 col-sm-2"><a href="{{download-link}}"><img class="icon" src="{{icon}}"></a></div>
-      <div class="col-xs-8 col-sm-10"><h3><a href="{{download-link}}">{{display-name}}</a></h3></div>
+      <div class="col-xs-3 col-sm-2 col-md-1"><a href="{{download-link}}"><img class="icon" src="{{icon}}"></a></div>
+      <div class="col-xs-9 col-sm-10 col-md-11"><h3><a href="{{download-link}}">{{display-name}}</a></h3></div>
     </div>
     <hr>
     <div class="app-info-body"></div>
     <hr>
-    <a target="_blank" href="{{link}}" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-open" aria-hidden="true"></span>Launch</a>
-    {{#link-download}}<a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Download</a>{{/link-download}}
+    <a target="_blank" href="{{link}}" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>
+    {{#link-download}}<a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download" aria-hidden="true"></span>Back</a>{{/link-download}}
     <a href="#/" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>App List</a>
     </div>
     {{/app}}
