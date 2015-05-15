@@ -68,41 +68,40 @@
             <hr>
             <h4>Sites</h4>
             <div id="swipe-list-2"></div>
-            <hr>8
+            <hr>
             <!--<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>-->
         </section>
         <section id="app-info-page">
-            
-    </section>
-    <section id="help-page">
-                <h2>Help Lines &amp; Support</h2>
-                <br>
-                <table class="table table-striped table-bordered">
-                    <tbody>
-                        <tr class="even">
-                            <td>IT Service Desk</td>
-                            <td><a href="tel:+18664505250"><span class="glyphicon glyphicon-earphone"></span> 1-866-450-5250</a></td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Emergency Status</td>
-                            <td><a href="tel:+1844"><span class="glyphicon glyphicon-earphone"></span> 1-844-895-0606</a></td>
-                        </tr>
-                        <tr class="even">
-                            <td>Employee Benefits</td>
-                            <td><a href="tel:+18006514826"><span class="glyphicon glyphicon-earphone"></span> 1-800-651-4826</a></td>
-                        </tr>
-                        <tr class="odd">
-                            <td>Financial Apps</td>
-                            <td><a href="tel:+18664506588"><span class="glyphicon glyphicon-earphone"></span> 1-866-450-6588</a></td>
-                        </tr>
-                        <tr class="even">
-                            <td>PBS Nat'l Apps</td>
-                            <td><a href="tel:+18663677878"><span class="glyphicon glyphicon-earphone"></span> 1-866-367-7878</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
-            </section>​
+        </section>
+        <section id="help-page">
+            <h2>Help Lines &amp; Support</h2>
+            <br>
+            <table class="table table-striped table-bordered">
+                <tbody>
+                    <tr class="even">
+                        <td>IT Service Desk</td>
+                        <td><a href="tel:+18664505250"><span class="glyphicon glyphicon-earphone"></span> 1-866-450-5250</a></td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Emergency Status</td>
+                        <td><a href="tel:+1844"><span class="glyphicon glyphicon-earphone"></span> 1-844-895-0606</a></td>
+                    </tr>
+                    <tr class="even">
+                        <td>Employee Benefits</td>
+                        <td><a href="tel:+18006514826"><span class="glyphicon glyphicon-earphone"></span> 1-800-651-4826</a></td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Financial Apps</td>
+                        <td><a href="tel:+18664506588"><span class="glyphicon glyphicon-earphone"></span> 1-866-450-6588</a></td>
+                    </tr>
+                    <tr class="even">
+                        <td>PBS Nat'l Apps</td>
+                        <td><a href="tel:+18663677878"><span class="glyphicon glyphicon-earphone"></span> 1-866-367-7878</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
+        </section>​
     </div>
     </div>
     <div id="templates">
@@ -130,9 +129,8 @@
                 <div class="app-info-body"></div>
                 <hr>
                 <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
-                <hr>
-                {{#link-download}}<a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>{{/link-download}}
-      
+                <hr> {{#link-download}}
+                <a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>{{/link-download}}
             </div>
             {{/app}}
         </script>
