@@ -39,25 +39,26 @@ var apps = [
 		"display-name":"Adobe Connect",
 		"icon":"img/icons/adobe_connect.jpg",
 		"link-download": {
-			"ios":"",
-			"android":""
-		},
-		"link-download":null
+			"ios":"https://itunes.apple.com/us/app/adobe-connect-mobile/id430437503?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=air.com.adobe.connectpro&hl=en"
+		}
 	},
 	{
 		"name":"anyconnect",
 		"display-name":"AnyConnect",
 		"icon":"img/icons/anyconnect_cropped.png",
-		"link":"",
-		"link-download":null
+		"link-download": {
+			"ios":"https://itunes.apple.com/us/app/cisco-anyconnect/id392790924?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.cisco.anyconnect.vpn.android.avf"
+		}
 	},
 	{
 		"name":"bookit",
 		"display-name":"BookIt",
 		"icon":"img/icons/BookIt.jpg",
 		"link-download": {
-			"ios":"",
-			"android":""
+			"ios":"https://itunes.apple.com/us/app/onboard-mobile/id593139155?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.agilquest.onboard.mobile1&hl=en"
 		}
 	},
 	{
@@ -65,15 +66,18 @@ var apps = [
 		"display-name":"GSA Per Diem",
 		"icon":"img/icons/Per Diem_100.png",
 		"link":"",
-		"link-download":null
+		"link-download":{
+			"ios":"https://itunes.apple.com/us/app/per-diem-for-continental-u.s/id438535861?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=gov.gsa.android.perdiem",
+		}
 	},
 	{
 		"name":"myview",
 		"display-name":"MyView",
 		"icon":"img/icons/VMware_cropped.jpg",
 		"link-download": {
-			"ios":"",
-			"android":""
+			"ios":"https://itunes.apple.com/us/app/vmware-horizon-client/id417993697?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.vmware.view.client.android&hl=en"
 		}
 	},
 	{
@@ -81,8 +85,8 @@ var apps = [
 		"display-name":"Salesforce",
 		"icon":"img/icons/Salesforce_cropped.jpg",
 		"link-download": {
-			"ios":"",
-			"android":""
+			"ios":"https://itunes.apple.com/us/app/salesforce1/id404249815?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.salesforce.chatter&hl=en"
 		}
 	},
 	{
@@ -90,8 +94,8 @@ var apps = [
 		"display-name":"SecureAuth OTP",
 		"icon":"img/icons/Secureauth.png",
 		"link-download": {
-			"ios":"",
-			"android":""
+			"ios":"https://itunes.apple.com/us/app/secureauth-otp/id615536686?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=secureauth.android.token"
 		}
 	},
 ]
