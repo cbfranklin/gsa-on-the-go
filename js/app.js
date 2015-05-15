@@ -35,12 +35,14 @@ function app() {
             $('#swipe-list,#swipe-list-2').slick({
                 dots: false,
                 arrows: false,
-                infinite: false,
                 mobileFirst: true,
+                accessibility: true,
                 /*slidesToShow: 3,
                 slidesToScroll: 3,*/
-                adaptiveHeight: true,
                 infinite: true,
+                autoplay: false,
+                swipeToSlide: true,
+                variableWidth: true,
                 responsive: [{
                     breakpoint: 768,
                     settings: {
@@ -67,8 +69,12 @@ function app() {
     router.get('/', function(req) {
         router.navigate('');
     })
-     router.get('/apps', function(req) {
+    router.get('/apps', function(req) {
         router.navigate('');
+    })
+    router.get('/help', function(req) {
+        $('section').hide();
+        $('#help-page').show();
     })
     router.get('/apps/:name', function(req) {
         $('section').hide();

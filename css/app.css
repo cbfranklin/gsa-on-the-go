@@ -35,7 +35,7 @@ nav ul {
     background: #337AB7;
     color: #ededed;
 }
-.nav-primary li:hover span, .nav-primary li.active span {
+.nav-primary li:hover a, .nav-primary li.active a {
     color: #ededed;
 }
 .nav-primary li.active {
@@ -47,7 +47,7 @@ nav ul {
 .hero.blurred::after {
     border-color: transparent transparent #337AB7 transparent;
 }
-.nav-primary li > span {
+.nav-primary li > a {
     color: #337AB7;
     text-decoration: none;
     font-weight: bold;
@@ -61,7 +61,7 @@ nav ul {
     text-align: center;
     vertical-align: middle;
 }
-.nav-primary li > span > span {
+.nav-primary li > a > span {
     padding-left: 10px;
     float: left;
 }
@@ -481,15 +481,17 @@ a:hover {
     height:100px;
 }
 .swipe-list-item{
-    width:60px;
+    width:100px;
     height:auto;
     display:block;
     overflow:hidden;
+    text-align: center;
 }
 .swipe-list-item a{
     display:block;
 }
 .swipe-list-item img{
-    width:60px;
+    width:80px;
     height:auto;
+    margin:0 auto;
 }

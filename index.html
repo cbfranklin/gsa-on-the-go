@@ -1,104 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>GSA On the Go</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="js/lib/routie.js"></script>
-  <script src="js/lib/toe.min.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="lib/slick/slick.min.js"></script>
-  <script src="js/lib/mustache.min.js"></script>
-  <script src="js/lib/grapnel.min.js"></script>
-  <script src="data/apps.js"></script>
-  <script src="js/app.js"></script>
-  <script>
-  $(function(){
-    navigation();
-    app();
-  });
-  </script>
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"  type="text/css">
-  <link href="lib/slick/slick.css" rel="stylesheet" type="text/css">
-  <link href="css/animate.css" rel="stylesheet"  type="text/css">
-  <link href="css/app.css" rel="stylesheet" type="text/css">
+    <title>GSA On the Go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="js/lib/routie.js"></script>
+    <script src="js/lib/toe.min.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/lib/mustache.min.js"></script>
+    <script src="js/lib/grapnel.min.js"></script>
+    <script src="data/apps.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+    $(function() {
+        navigation();
+        app();
+    });
+    </script>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="lib/slick/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-  <div class="hero">
-    <div class="hero-inner">GSA On the Go</div>
-    <div class="hero-insite">
-      <a href="http://insite.gsa.gov">
-        <!--<button type="button" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>InSite</button>-->
-      </a>
-    </div>
+    <div class="hero">
+        <div class="hero-inner">GSA On the Go</div>
+        <div class="hero-insite">
+            <a href="http://insite.gsa.gov">
+                <!--<button type="button" class="btn btn-sm btn-info"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>InSite</button>-->
+            </a>
+        </div>
         <a class="menu-toggle">
-          <svg class="hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             width="50px" height="50px" viewBox="3.5 4.5 30 35" xml:space="preserve">
-            <g class="svg-menu-toggle">
-              <path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0
+            <svg class="hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="3.5 4.5 30 35" xml:space="preserve">
+                <g class="svg-menu-toggle">
+                    <path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0
                 c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
-              </path>
-              <path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
-              </path>
-              <path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0
+                    </path>
+                    <path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
+                    </path>
+                    <path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0
                 c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
-              </path>
-            <rect width="20" height="20" fill="none"></rect>
-            </g>
-          </svg>
+                    </path>
+                    <rect width="20" height="20" fill="none"></rect>
+                </g>
+            </svg>
         </a>
-      </div>
-  <nav>
-    <ul class="nav-primary">
-      <li data-nav="x"><span>InSite<!--<span class="glyphicon glyphicon-time" aria-hidden="true"></span>--></span></li>
-      <!--<li data-nav="x"><span>Navigation 2<span class="glyphicon glyphicon-search" aria-hidden="true"></span></span></li>-->
-      <!--<li data-nav="x"><span>Navigation 3<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span></li>-->
-    </ul>
-</nav>
-<div class="container">
-<section id="app-list-page" class="animated fadeIn">
-  <h2>Mobile Resources</h2>
-  <p>Get work done on your phone and tablet with these apps and sites.<br></p>
-<h4>Apps</h4>
-<div id="swipe-list"></div>
-<h4>Sites</h4>
-<div id="swipe-list-2"></div>
-<br>
-<!--<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>-->
-</section>
-<section id="app-info-page">
-
-</div>
-</div>
-
-<div id="templates">
-  <script type="template" class="swipe-list">
-  {{#apps}}
-  <div class="swipe-list-item {{name}}">
-    <a {{#is-site}}href="{{link}}" target="_blank"{{/is-site}}{{^is-site}}href="#/apps/{{name}}"{{/is-site}} role="button">
-      <img src="{{icon}}"/>
-      <small>{{display-name}}</small>
-      </a>
-  </div>
-  {{/apps}}
-  </script>
-  <script type="template" class="app-info">
-    {{#app}}
-    <div class="app-info">
-    <div class="row app-info-header">
-      <div class="col-xs-3 col-sm-2 col-md-1"><a href="{{download-link}}"><img class="icon" src="{{icon}}"></a></div>
-      <div class="col-xs-9 col-sm-10 col-md-11"><h3><a href="{{download-link}}">{{display-name}}</a></h3></div>
     </div>
-    <hr>
-    <div class="app-info-body"></div>
-    <hr>
-    <!--<a target="_blank" href="{{link}}" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>-->
-    {{#link-download}}<a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>{{/link-download}}
-    <a href="#/" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
+    <nav>
+        <ul class="nav-primary">
+            <li><a href="https://insite.gsa.gov" target="_blank">InSite</a></li>
+            <li><a href="#/help">Help Lines</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="app-list-page" class="animated fadeIn">
+            <h2>Mobile Resources</h2>
+            <p>Get work done on your phone and tablet with these apps and sites.
+                <br>
+            </p>
+            <h4>Apps</h4>
+            <div id="swipe-list"></div>
+            <h4>Sites</h4>
+            <div id="swipe-list-2"></div>
+            <br>
+            <!--<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>-->
+        </section>
+        <section id="app-info-page">
+            
+    </section>
+    <section id="help-page">
+                <h2>Help Lines &amp; Support</h2>
+                <br>
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                        <tr class="even">
+                            <td>IT Service Desk</td>
+                            <td><a href="tel:+18664505250"><span class="glyphicon glyphicon-earphone"></span> 1-866-450-5250</a></td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Emergency Status</td>
+                            <td><a href="tel:+1844"><span class="glyphicon glyphicon-earphone"></span> 1-844-895-0606</a></td>
+                        </tr>
+                        <tr class="even">
+                            <td>Employee Benefits</td>
+                            <td><a href="tel:+18006514826"><span class="glyphicon glyphicon-earphone"></span> 1-800-651-4826</a></td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Financial Apps</td>
+                            <td><a href="tel:+18664506588"><span class="glyphicon glyphicon-earphone"></span> 1-866-450-6588</a></td>
+                        </tr>
+                        <tr class="even">
+                            <td>PBS Nat'l Apps</td>
+                            <td><a href="tel:+18663677878"><span class="glyphicon glyphicon-earphone"></span> 1-866-367-7878</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#/" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
+            </section>​
     </div>
-    {{/app}}
-  </script>
-</div>
+    </div>
+    <div id="templates">
+        <script type="template" class="swipe-list">
+            {{#apps}}
+            <div class="swipe-list-item {{name}}">
+                <a {{#is-site}}href="{{link}}" target="_blank" {{/is-site}}{{^is-site}}href="#/apps/{{name}}" {{/is-site}} role="button">
+                    <img src="{{icon}}" />
+                    <small>{{display-name}}</small>
+                </a>
+            </div>
+            {{/apps}}
+        </script>
+        <script type="template" class="app-info">
+            {{#app}}
+            <div class="app-info">
+                <div class="row app-info-header">
+                    <div class="col-xs-3 col-sm-2 col-md-1">
+                        <a href="{{download-link}}"><img class="icon" src="{{icon}}"></a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 col-md-11">
+                        <h3><a href="{{download-link}}">{{display-name}}</a></h3></div>
+                </div>
+                <hr>
+                <div class="app-info-body"></div>
+                <hr>
+                <!--<a target="_blank" href="{{link}}" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>-->
+                {{#link-download}}<a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>{{/link-download}}
+                <a href="#/" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
+            </div>
+            {{/app}}
+        </script>
+    </div>
 </body>
+
 </html>

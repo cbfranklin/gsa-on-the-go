@@ -40,7 +40,7 @@ function navigation() {
 
     $('.btn-navigation,nav li').on('click',function(){
         var nav = $(this).attr('data-nav');
-        routie('/'+nav);
+        router.navigate(nav);
         $('nav').removeClass('active');
         $('.menu-toggle').removeClass('active');
     })
