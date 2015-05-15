@@ -1,14 +1,14 @@
 var apps = [
 	{
 		"name":"mgsa",
-		"display-name":"Mobile GSA.gov",
+		"display-name":"Mobile GSA",
 		"icon":"img/icons/mgsa.png",
 		"link":"http://m.gsa.gov/m/",
 		"is-site":true
 	},
 	{
 		"name":"1800f-shuttle",
-		"display-name":"1800F Shuttle",
+		"display-name":"1800 F Shuttle",
 		"icon":"img/icons/1800fshuttle.png",
 		"link":"https://insite.gsa.gov/resources/apps/1800f-shuttle/",
 		"is-site":true
@@ -63,7 +63,7 @@ var apps = [
 	},
 	{
 		"name":"gsa-perdiem",
-		"display-name":"GSA Per Diem",
+		"display-name":"Per Diem",
 		"icon":"img/icons/Per Diem_100.png",
 		"link":"",
 		"link-download":{
@@ -91,7 +91,7 @@ var apps = [
 	},
 	{
 		"name":"secureauth-otp",
-		"display-name":"SecureAuth OTP",
+		"display-name":"SecureAuth",
 		"icon":"img/icons/Secureauth.png",
 		"link-download": {
 			"ios":"https://itunes.apple.com/us/app/secureauth-otp/id615536686?mt=8",
