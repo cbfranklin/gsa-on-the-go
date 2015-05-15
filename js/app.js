@@ -37,12 +37,11 @@ function app() {
                 arrows: false,
                 mobileFirst: true,
                 accessibility: true,
-                /*slidesToShow: 3,
-                slidesToScroll: 3,*/
                 infinite: true,
                 autoplay: false,
                 swipeToSlide: true,
                 variableWidth: true,
+                slidesToScroll: 3,
                 responsive: [{
                     breakpoint: 768,
                     settings: {
