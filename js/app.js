@@ -32,7 +32,10 @@ function app() {
             });
             $('#swipe-list').html(rendered_list_1);
             $('#swipe-list-2').html(rendered_list_2);
-            $('#swipe-list,#swipe-list-2').slick({
+            $('#swipe-list,#swipe-list-2').owlCarousel({
+                itemsMobile: [479,3]
+            });
+            /*$('#swipe-list,#swipe-list-2').slick({
                 dots: false,
                 arrows: false,
                 mobileFirst: true,
@@ -61,7 +64,7 @@ function app() {
                         slidesToScroll: 3
                     }
                 }]
-            });
+            });*/
         }
         $('#app-list-page').show();
     });

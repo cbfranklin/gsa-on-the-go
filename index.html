@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="js/lib/routie.js"></script>
-    <script src="js/lib/toe.min.js"></script>
+    <script src="js/lib/owl.carousel.min.js"></script>
     <script src="js/navigation.js"></script>
     <script src="lib/slick/slick.min.js"></script>
     <script src="js/lib/mustache.min.js"></script>
@@ -107,7 +107,7 @@
     <div id="templates">
         <script type="template" class="swipe-list">
             {{#apps}}
-            <div class="swipe-list-item {{name}}">
+            <div class=" {{name}}">
                 <a {{#is-site}}href="{{link}}" target="_blank" {{/is-site}}{{^is-site}}href="#/apps/{{name}}" {{/is-site}} role="button">
                     <img src="{{icon}}" />
                     <small>{{display-name}}</small>
