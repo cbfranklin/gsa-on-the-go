@@ -490,6 +490,9 @@ a:hover {
 .owl-item a{
     display:block;
 }
+.owl-item small{
+    display:block;
+}
 .owl-item img{
     width:80px;
     height:auto;

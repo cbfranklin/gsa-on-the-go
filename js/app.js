@@ -33,7 +33,10 @@ function app() {
             $('#swipe-list').html(rendered_list_1);
             $('#swipe-list-2').html(rendered_list_2);
             $('#swipe-list,#swipe-list-2').owlCarousel({
-                itemsMobile: [479,3]
+                itemsMobile: [479,3],
+                itemsTablet: [767,4],
+                itemsDesktopSmall: false,
+                itemsDesktop: [1023,7]
             });
             /*$('#swipe-list,#swipe-list-2').slick({
                 dots: false,
