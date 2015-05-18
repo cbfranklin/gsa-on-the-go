@@ -132,12 +132,15 @@
                         <h3><a href="{{download-link}}">{{display-name}}</a></h3></div>
                 </div>
                 <hr>
+                {{#link-download}}
+                <a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>
+                {{/link-download}}
+            </div>
+            <hr>
                 <div class="app-info-body"></div>
                 <hr>
                 <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
-                <hr> {{#link-download}}
-                <a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>{{/link-download}}
-            </div>
+                <hr>
             {{/app}}
         </script>
     </div>
