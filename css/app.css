@@ -166,6 +166,10 @@ h2 .glyphicon {
     transition: all 0.3s ease;
 }
 .container.nav-active{
+    -webkit-transform:translate3d(300px, 0, 0)
+    -moz-transform:translate3d(300px, 0, 0)
+    -o-transform:translate3d(300px, 0, 0)
+    -ms-transform:translate3d(300px, 0, 0)
     transform:translate3d(300px, 0, 0)
 }
 nav {
