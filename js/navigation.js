@@ -36,6 +36,7 @@ function navigation() {
         $(this).toggleClass('active');
         $('nav').toggleClass('active');
         $('.nav-primary li').removeClass('active');
+        $('.container').toggleClass('nav-active')
     });
 
     $('.btn-navigation,nav li').on('click',function(){
@@ -43,6 +44,6 @@ function navigation() {
         router.navigate(nav);
         $('nav').removeClass('active');
         $('.menu-toggle').removeClass('active');
+        $('.container').removeClass('nav-active')
     })
-
 };

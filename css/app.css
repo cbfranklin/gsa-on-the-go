@@ -158,13 +158,23 @@ h2 .glyphicon {
     }
 }*/
 /*@media (max-width:991px){*/
-
+.container{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.container.nav-active{
+    transform:translate3d(300px, 0, 0)
+}
 nav {
     position: fixed;
     width: 300px;
     height: 100%;
     top: 60px;
     left: -300px;
+    background:#337AB7;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -196,7 +206,10 @@ nav ul {
     width: 100%;
     height: 50px;
     border: none;
-    border-bottom: 1px solid #cccbc9;
+    border-bottom: 1px solid #263092;
+}
+.nav-primary li a{
+    color:#fff;
 }
 .nav-primary li br {} .nav-primary li::after {
     display: none;
