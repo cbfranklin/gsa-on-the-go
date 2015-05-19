@@ -73,12 +73,12 @@ function app() {
             console.log('no cookie')
             $('.overlay').show();
             $('.overlay').on('swipe',function(event){
-                $('.overlay').addClass('slideOutLeft animated')
+                $('.overlay').hide();
                 console.log('swiped')
                 Cookies.set('onTheGo_seenSwipeDialog', 'true');
             });
             $('.overlay').on('click',function(event){
-                $('.overlay').addClass('fadeOut animated')
+                $('.overlay').hide();
                 console.log('clicked')
                 Cookies.set('onTheGo_seenSwipeDialog', 'true');
             });
