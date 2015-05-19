@@ -36,7 +36,8 @@ function app() {
                 itemsMobile: [479,3],
                 itemsTablet: [767,4],
                 itemsDesktopSmall: false,
-                itemsDesktop: [1023,7]
+                itemsDesktop: [1023,7],
+                pagination: true
             });
             /*$('#swipe-list,#swipe-list-2').slick({
                 dots: false,
