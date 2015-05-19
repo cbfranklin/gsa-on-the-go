@@ -130,16 +130,27 @@
             {{#app}}
             <div class="app-info">
                 <div class="row app-info-header">
+                {{#link-download-platform}}
                     <div class="col-xs-3 col-sm-2 col-md-1">
-                        <a href="{{link-download}}"><img class="icon" src="{{icon}}"></a>
+                        <a href="{{link-download-platform}}"><img class="icon" src="{{icon}}"></a>
                     </div>
                     <div class="col-xs-9 col-sm-10 col-md-11">
-                        <h3><a href="{{link-download}}">{{display-name}}</a></h3></div>
+                        <h3><a href="{{link-download-platform}}">{{display-name}}</a></h3></div>
                 </div>
-                {{#link-download}}
                 <hr>
-                <a href="{{link-download}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>
-                {{/link-download}}
+                <a href="{{link-download-platform}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>
+                {{/link-download-platform}}
+                {{^link-download-platform}}
+                <div class="col-xs-3 col-sm-2 col-md-1">
+                        <img class="icon" src="{{icon}}">
+                    </div>
+                    <div class="col-xs-9 col-sm-10 col-md-11">
+                        <h3>{{display-name}}</h3></div>
+                </div>
+                <hr>
+                <a href="{{link-download.ios}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Apple App Store</a>
+                <a href="{{link-download.android}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Google Play Store</a>
+                {{/link-download-platform}}
             </div>
             <hr>
                 <div class="app-info-body"></div>

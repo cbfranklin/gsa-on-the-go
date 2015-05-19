@@ -130,35 +130,32 @@ var isMobile = {
 };
 
 function platformSpecific() {
-    if (isMobile.Android()) {
-        for (i in apps) {
-            if (apps[i]['link-download']) {
-                apps[i]['link-download'] = apps[i]['link-download']['android'];
+        if (isMobile.Android()) {
+            for (i in apps) {
+                if (apps[i]['link-download']) {
+                    apps[i]['link-download-platform'] = apps[i]['link-download']['android'];
+                }
             }
         }
-    } else if (isMobile.iOS()) {
-        for (i in apps) {
-            if (apps[i]['link-download']) {
-                apps[i]['link-download'] = apps[i]['link-download']['ios'];
+            if (isMobile.iOS()) {
+                for (i in apps) {
+                    if (apps[i]['link-download']) {
+                        apps[i]['link-download-platform'] = apps[i]['link-download']['ios'];
+                    }
+                }
             }
-        }
-    } else {
-        for (i in apps) {
-            apps[i]['link-download'] = null;
-        }
-    }
 
-    if (isMobile.any()) {
-        for (i in apps) {
-            if (typeof apps[i].link === 'object') {
-                apps[i]['link'] = apps[i]['link']['mobile']
+            if (isMobile.any()) {
+                for (i in apps) {
+                    if (typeof apps[i].link === 'object') {
+                        apps[i]['link'] = apps[i]['link']['mobile']
+                    }
+                }
+            } else {
+                for (i in apps) {
+                    if (typeof apps[i].link === 'object') {
+                        apps[i]['link'] = apps[i]['link']['desktop']
+                    }
+                }
             }
         }
-    } else {
-        for (i in apps) {
-            if (typeof apps[i].link === 'object') {
-                apps[i]['link'] = apps[i]['link']['desktop']
-            }
-        }
-    }
-}
