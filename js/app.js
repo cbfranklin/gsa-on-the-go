@@ -70,20 +70,6 @@ function app() {
                 }]
             });*/
         }
-        if(!Cookies.get('onTheGo_seenSwipeDialog')){
-            console.log('no cookie')
-            $('.overlay').show();
-            $('.overlay').on('swipe',function(event){
-                $('.overlay').hide();
-                console.log('swiped')
-                Cookies.set('onTheGo_seenSwipeDialog', 'true');
-            });
-            $('.overlay').on('click',function(event){
-                $('.overlay').hide();
-                console.log('clicked')
-                Cookies.set('onTheGo_seenSwipeDialog', 'true');
-            });
-        }
         $('#app-list-page').show();
     });
     router.get('/', function(req) {
