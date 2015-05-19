@@ -497,6 +497,22 @@ a:hover {
 #swipe-list .slick-list{
     height:100px;
 }
+
+.overlay{
+    position:fixed;
+    top:60px;
+    left:0;
+    background:rgba(0,0,0,0.9);
+    width:100%;
+    height:100%;
+    color:#fff;
+    z-index:1000;
+    text-align:center;
+    padding:20%;
+    font-size:30px;
+    cursor:pointer;
+}
+
 .owl-item{
     width:100px;
     height:auto;

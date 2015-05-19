@@ -69,6 +69,20 @@ function app() {
                 }]
             });*/
         }
+        if(!Cookies.get('onTheGo_seenSwipeDialog')){
+            console.log('no cookie')
+            $('.overlay').show();
+            $('.overlay').on('swipe',function(event){
+                $('.overlay').addClass('slideOutLeft animated')
+                console.log('swiped')
+                Cookies.set('onTheGo_seenSwipeDialog', 'true');
+            });
+            $('.overlay').on('click',function(event){
+                $('.overlay').addClass('fadeOut animated')
+                console.log('clicked')
+                Cookies.set('onTheGo_seenSwipeDialog', 'true');
+            });
+        }
         $('#app-list-page').show();
     });
     router.get('/', function(req) {
