@@ -116,11 +116,27 @@
         <section id="feedback">
             <h2>Feedback</h2>
             <p>Please help us to make this a more useful tool by providing feedback on your experience. Let us know if there are other mobile apps or sites that we should add or make suggestions for improvement.</p>
-            <div class="google-form"><form target="form-target" onsubmit="this.action='https://docs.google.com/a/gsa.gov/spreadsheet/formResponse?formkey=dDZOT1UzdUJydGVpMF8wMnFyV0FfRFE6MA&amp;ifq'" style="position:relative" method="POST"> <label class="ss-q-help" for="entry_0"></label> <br><textarea name="entry.0.single" rows="6" cols="60" class="ss-q-long" id="entry_0"></textarea><hr><input class="btn btn-primary btn-block" value="Submit" type="submit"><iframe id="form-target" name="form-target" style="width:0px; height:0px; border:0px;"></iframe><script>$(function() {$("body").on("click", ".google-form input[type=submit]", function() {router.navigate('/thankyou'); }); });</script></form></div>
+            <div class="google-form">
+                <form target="form-target" onsubmit="this.action='https://docs.google.com/a/gsa.gov/spreadsheet/formResponse?formkey=dDZOT1UzdUJydGVpMF8wMnFyV0FfRFE6MA&amp;ifq'" style="position:relative" method="POST">
+                    <textarea name="entry.0.single" rows="6" cols="60" class="ss-q-long" id="entry_0"></textarea>
+                    <hr>
+                    <input class="btn btn-primary btn-block" value="Submit" type="submit">
+                    <iframe id="form-target" name="form-target" style="width:0px; height:0px; border:0px;"></iframe>
+                    <script>
+                    $(function() {
+                        $("body").on("click", ".google-form input[type=submit]", function() {
+                            router.navigate('/thankyou');
+                        });
+                    });
+                    </script>
+                </form>
+            </div>
         </section>
         <section id="thankyou">
             <h2>Thank you!</h2>
-            <p>Your response has been submitted.<br></p>
+            <p>Your response has been submitted.
+                <br>
+            </p>
             <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
         </section>
     </div>
@@ -140,7 +156,7 @@
             {{#app}}
             <div class="app-info">
                 <div class="row app-info-header">
-                {{#link-download-platform}}
+                    {{#link-download-platform}}
                     <div class="col-xs-3 col-sm-2 col-md-1">
                         <a href="{{link-download-platform}}"><img class="icon" src="{{icon}}"></a>
                     </div>
@@ -148,27 +164,24 @@
                         <h3><a href="{{link-download-platform}}">{{display-name}}</a></h3></div>
                 </div>
                 <hr>
-                <a href="{{link-download-platform}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>
-                {{/link-download-platform}}
-                {{^link-download-platform}}
+                <a href="{{link-download-platform}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a> {{/link-download-platform}} {{^link-download-platform}}
                 <div class="col-xs-3 col-sm-2 col-md-1">
-                        <img class="icon" src="{{icon}}">
-                    </div>
-                    <div class="col-xs-9 col-sm-10 col-md-11">
-                        <h3>{{display-name}}</h3></div>
+                    <img class="icon" src="{{icon}}">
                 </div>
-                <hr>
-                <a href="{{link-download.ios}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Apple App Store</a>
-                <a href="{{link-download.android}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Google Play Store</a>
-                {{/link-download-platform}}
+                <div class="col-xs-9 col-sm-10 col-md-11">
+                    <h3>{{display-name}}</h3></div>
             </div>
             <hr>
-                <div class="app-info-body"></div>
-                <hr>
-                <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
-                <hr>
-            {{/app}}
-        </script>
+            <a href="{{link-download.ios}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Apple App Store</a>
+            <a href="{{link-download.android}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Google Play Store</a> {{/link-download-platform}}
+    </div>
+    <hr>
+    <div class="app-info-body"></div>
+    <hr>
+    <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
+    <hr> {{/app}}
+    </script>
     </div>
 </body>
+
 </html>
