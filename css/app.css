@@ -76,6 +76,9 @@ nav ul {
 h2 .glyphicon {
     float: right;
 }
+textarea{
+    width:100%;
+}
 .hero {
     background: #263092;
     color: #ededed;

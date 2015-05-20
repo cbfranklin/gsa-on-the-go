@@ -78,9 +78,20 @@ function app() {
     router.get('/apps', function(req) {
         router.navigate('');
     })
+    router.get('undefined', function(req) {
+        router.navigate('');
+    })
     router.get('/help', function(req) {
         $('section').hide();
         $('#help-page').show();
+    })
+    router.get('/feedback', function(req) {
+        $('section').hide();
+        $('#feedback').show();
+    })
+    router.get('/thankyou', function(req) {
+        $('section').hide();
+        $('#thankyou').show();
     })
     router.get('/apps/:name', function(req) {
         $('section').hide();
