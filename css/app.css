@@ -1,6 +1,10 @@
 body {
     font-family: Arial;
     box-sizing: border-box;
+    color:#fff;
+}
+section{
+    color:#000;
 }
 nav {
     margin: auto;
