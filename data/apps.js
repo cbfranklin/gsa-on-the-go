@@ -17,7 +17,7 @@ var apps = [
 		"name":"aloha",
 		"display-name":"ALOHA",
 		"icon":"img/icons/aloha.png",
-		"link":"https://aloha.gsa.gov/",
+		"link":"http://aloha.gsa.gov/",
 		"is-site":true
 	},
 	{
