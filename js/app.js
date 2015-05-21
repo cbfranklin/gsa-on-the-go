@@ -106,6 +106,11 @@ function app() {
         }
     })
 
+    $('body').on('click','.container.nav-active',function(){
+        $('nav,.menu-toggle').removeClass('active');
+        $('.container').removeClass('nav-active')
+    })
+
     router.on('navigate', function(event) {
         if (window.location.hash.indexOf('#/') > -1) {
             if (gaCrumb.indexOf('#') > -1) {

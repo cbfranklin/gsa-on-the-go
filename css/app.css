@@ -390,19 +390,6 @@ nav ul {
     margin: 0 auto;
 }
 
-.nav-primary li.active {
-    background: #bbb;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
 /*}*/
 
 section {
@@ -814,11 +801,5 @@ a:hover {
         -o-transform: translate3d(300px, 0, 0);
         -moz-transform: translate3d(300px, 0, 0);
         transform: translate3d(300px, 0, 0);
-    }
-}
-
-@media (max-width: 479px) {
-    .container.nav-active {
-        filter: grayscale(1);
     }
 }
