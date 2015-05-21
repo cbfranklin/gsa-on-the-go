@@ -42,36 +42,6 @@ function app() {
                 itemsDesktop: [1023, 7],
                 pagination: true
             });
-            /*$('#swipe-list,#swipe-list-2').slick({
-                dots: false,
-                arrows: false,
-                mobileFirst: true,
-                accessibility: true,
-                infinite: true,
-                autoplay: false,
-                swipeToSlide: true,
-                variableWidth: true,
-                slidesToScroll: 3,
-                responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 5,
-                    }
-                }, {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                    }
-                }, {
-                    breakpoint: 320,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                }]
-            });*/
         }
         $('#app-list-page').show();
     });
@@ -116,6 +86,17 @@ function app() {
         var req = 'app-info/' + findByName[0].name + '.html';
         $('.app-info-body').load(req);
     });
+    $('body').on('click', 'a', function(e) {
+        var url = $(this).attr('href');
+        if (url.indexOf('http') > -1) {
+            ga('send', 'event', 'outbound', 'click', url, {
+                'hitCallback': function() {
+                    document.location = url;
+                }
+            });
+            e.preventDefault();
+        }
+    })
 
     router.on('navigate', function(event) {
         if (window.location.hash.indexOf('#/') > -1) {
