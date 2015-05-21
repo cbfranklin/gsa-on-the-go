@@ -215,7 +215,7 @@ nav {
     position: fixed;
     width: 300px;
     height: 100%;
-    top: 70px;
+    top: 60px;
     left: -300px;
     background: #337AB7;
     -webkit-transition: all 0.3s ease;
@@ -232,19 +232,10 @@ nav.active {
     -ms-transform: translate3d(300px, 0, 0);
     transform: translate3d(300px, 0, 0);
 }
-.ios-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    background: #263092;
-    height:10px;
-    z-index: 1001;
-}
 .hero {
     width: 100%;
     position: fixed;
-    top: 10px;
+    top: 0;
     left: 0;
     height: 60px;
     background: #263092;
@@ -600,7 +591,7 @@ a:hover {
 
 .overlay {
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 0;
     background: rgba(0, 0, 0, 0.9);
     width: 100%;
