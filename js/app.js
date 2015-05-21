@@ -1,9 +1,8 @@
 var router;
-var gaCrumb = '/onthego/';
+var gaCrumb = '/onthego-test/';
 
 function app() {
 
-    analytics();
 
     platformSpecific();
 
@@ -116,6 +115,15 @@ function app() {
         var req = 'app-info/' + findByName[0].name + '.html';
         $('.app-info-body').load(req);
     });
+
+    router.on('navigate', function(event) {
+        if (window.location.hash.indexOf('#/') > -1) {
+            if (gaCrumb.indexOf('#') > -1) {
+                gaCrumb = gaCrumb.split('#')[0];
+            }
+            ga('send', 'pageview', gaCrumb + '/' + window.location.hash);
+        }
+    });
 }
 
 var isMobile = {
@@ -165,15 +173,4 @@ function platformSpecific() {
             }
         }
     }
-}
-
-function analytics() {
-    $(window).hashchange(function() {
-        if (window.location.hash.indexOf('#/') > -1) {
-            if (gaCrumb.indexOf('#') > -1) {
-                gaCrumb = gaCrumb.split('#')[0];
-            }
-            ga('send', 'pageview', gaCrumb + '/' + window.location.hash);
-        }
-    });
 }
