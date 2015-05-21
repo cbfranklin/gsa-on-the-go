@@ -114,11 +114,6 @@ function app() {
         }
     })
 
-    $('body').on('click','.hero-insite a',function(){
-        var href = $(this).attr('href');
-        window.open(href,'_system')
-    })
-
     $('body').on('click','.container.nav-active',function(){
         $('nav,.menu-toggle').removeClass('active');
         $('.container').removeClass('nav-active')
