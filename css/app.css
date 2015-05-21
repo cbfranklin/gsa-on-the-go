@@ -109,7 +109,6 @@ textarea {
     cursor: pointer;
     display: table;
     z-index: 100;
-    border-top:10px solid #263092;
 }
 
 .hero-inner {
@@ -209,6 +208,7 @@ textarea {
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    padding-top:10px;
 }
 
 nav {
@@ -232,17 +232,22 @@ nav.active {
     -ms-transform: translate3d(300px, 0, 0);
     transform: translate3d(300px, 0, 0);
 }
-
-.hero {
-    width: 100%;
+.ios-header{
     position: fixed;
     top: 0;
     left: 0;
+    width:100%;
+    background: #263092;
+    height:10px;
+    z-index: 1001;
+}
+.hero {
+    width: 100%;
+    position: fixed;
+    top: 10px;
+    left: 0;
     height: 60px;
     background: #263092;
-    -webkit-box-shadow: 0px 0px 3px -1px rgba(125, 125, 125, 1);
-    -moz-box-shadow: 0px 0px 3px -1px rgba(125, 125, 125, 1);
-    box-shadow: 0px 0px 3px -1px rgba(125, 125, 125, 1);
 }
 
 .hero-inner {
@@ -347,7 +352,7 @@ nav ul {
     height: 30px;
     position: absolute;
     left: 10px;
-    top: 17px;
+    top: 12px;
     display: block;
 }
 
@@ -595,7 +600,7 @@ a:hover {
 
 .overlay {
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 0;
     background: rgba(0, 0, 0, 0.9);
     width: 100%;
