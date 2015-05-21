@@ -119,8 +119,10 @@
             <div class="google-form">
                 <form target="form-target" onsubmit="this.action='https://docs.google.com/a/gsa.gov/spreadsheet/formResponse?formkey=dDZOT1UzdUJydGVpMF8wMnFyV0FfRFE6MA&amp;ifq'" style="position:relative" method="POST">
                     <textarea name="entry.0.single" rows="6" cols="60" class="ss-q-long" id="entry_0"></textarea>
+                    <input name="pageNumber" value="0" type="hidden">
+                    <input name="backupCache" value="" type="hidden">
                     <hr>
-                    <input class="btn btn-primary btn-block" value="Submit" type="submit">
+                    <input class="btn btn-primary btn-block" value="Submit" name="submit" type="submit">
                     <iframe id="form-target" name="form-target" style="width:0px; height:0px; border:0px;"></iframe>
                     <script>
                     $(function() {
