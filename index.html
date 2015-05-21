@@ -123,7 +123,17 @@
     </div>
     </div>
     <div id="templates">
-        <script type="template" class="swipe-list">
+        <script type="template" class="swipe-list-mobile">
+            {{#apps}}
+            <div class=" {{name}}">
+                <a {{#is-site}}href="{{link}}" target="_system" {{/is-site}}{{^is-site}}href="#/apps/{{name}}" {{/is-site}} role="button">
+                    <img src="{{icon}}" />
+                    <small>{{display-name}}</small>
+                </a>
+            </div>
+            {{/apps}}
+        </script>
+        <script type="template" class="swipe-list-desktop">
             {{#apps}}
             <div class=" {{name}}">
                 <a {{#is-site}}href="{{link}}" target="_blank" {{/is-site}}{{^is-site}}href="#/apps/{{name}}" {{/is-site}} role="button">

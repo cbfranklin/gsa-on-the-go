@@ -27,10 +27,18 @@ function app() {
             var list_apps = apps.filter(function(obj) {
                 return !obj['is-site'];
             })
-            var rendered_list_1 = Mustache.to_html($('#templates .swipe-list').html(), {
+
+            if(isMobile.any()){
+                var swipeTemplate = $('#templates .swipe-list-mobile').html();
+            }
+            else{
+                var swipeTemplate = $('#templates .swipe-list-desktop').html()
+            }
+
+            var rendered_list_1 = Mustache.to_html(swipeTemplate, {
                 apps: list_apps
             });
-            var rendered_list_2 = Mustache.to_html($('#templates .swipe-list').html(), {
+            var rendered_list_2 = Mustache.to_html(swipeTemplate, {
                 apps: list_sites
             });
             $('#swipe-list').html(rendered_list_1);
