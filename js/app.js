@@ -88,7 +88,7 @@ function app() {
     });
     $('body').on('click', 'a', function(e) {
         var url = $(this).attr('href');
-        if (url.indexOf('http') > -1) {
+        if (url.indexOf('http') > -1 && url.indexOf('gsa.gov') === -1) {
             ga('send', 'event', 'outbound', 'click', url, {
                 'hitCallback': function() {
                     document.location = url;
