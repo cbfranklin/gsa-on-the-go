@@ -1,6 +1,9 @@
 var router;
+var gaCrumb = '/onthego/';
 
 function app() {
+
+    analytics();
 
     platformSpecific();
 
@@ -18,10 +21,10 @@ function app() {
     router.get('', function(req) {
         $('section').hide();
         if ($('#swipe-list').is(':empty')) {
-            var list_sites = apps.filter(function(obj){
+            var list_sites = apps.filter(function(obj) {
                 return obj['is-site'] == true;
             })
-            var list_apps = apps.filter(function(obj){
+            var list_apps = apps.filter(function(obj) {
                 return !obj['is-site'];
             })
             var rendered_list_1 = Mustache.to_html($('#templates .swipe-list').html(), {
@@ -33,10 +36,10 @@ function app() {
             $('#swipe-list').html(rendered_list_1);
             $('#swipe-list-2').html(rendered_list_2);
             $('#swipe-list,#swipe-list-2').owlCarousel({
-                itemsMobile: [479,3],
-                itemsTablet: [767,4],
+                itemsMobile: [479, 3],
+                itemsTablet: [767, 4],
                 itemsDesktopSmall: false,
-                itemsDesktop: [1023,7],
+                itemsDesktop: [1023, 7],
                 pagination: true
             });
             /*$('#swipe-list,#swipe-list-2').slick({
@@ -88,6 +91,12 @@ function app() {
     router.get('/feedback', function(req) {
         $('section').hide();
         $('#feedback').show();
+        $(".google-form").on("submit", function() {
+            router.navigate('/thankyou');
+            setTimeout(function() {
+                $('.google-form textarea').val('');
+            }, 1000)
+        });
     })
     router.get('/thankyou', function(req) {
         $('section').hide();
@@ -128,32 +137,43 @@ var isMobile = {
 };
 
 function platformSpecific() {
-        if (isMobile.Android()) {
-            for (i in apps) {
-                if (apps[i]['link-download']) {
-                    apps[i]['link-download-platform'] = apps[i]['link-download']['android'];
-                }
+    if (isMobile.Android()) {
+        for (i in apps) {
+            if (apps[i]['link-download']) {
+                apps[i]['link-download-platform'] = apps[i]['link-download']['android'];
             }
         }
-            if (isMobile.iOS()) {
-                for (i in apps) {
-                    if (apps[i]['link-download']) {
-                        apps[i]['link-download-platform'] = apps[i]['link-download']['ios'];
-                    }
-                }
+    }
+    if (isMobile.iOS()) {
+        for (i in apps) {
+            if (apps[i]['link-download']) {
+                apps[i]['link-download-platform'] = apps[i]['link-download']['ios'];
             }
+        }
+    }
 
-            if (isMobile.any()) {
-                for (i in apps) {
-                    if (typeof apps[i].link === 'object') {
-                        apps[i]['link'] = apps[i]['link']['mobile']
-                    }
-                }
-            } else {
-                for (i in apps) {
-                    if (typeof apps[i].link === 'object') {
-                        apps[i]['link'] = apps[i]['link']['desktop']
-                    }
-                }
+    if (isMobile.any()) {
+        for (i in apps) {
+            if (typeof apps[i].link === 'object') {
+                apps[i]['link'] = apps[i]['link']['mobile']
             }
         }
+    } else {
+        for (i in apps) {
+            if (typeof apps[i].link === 'object') {
+                apps[i]['link'] = apps[i]['link']['desktop']
+            }
+        }
+    }
+}
+
+function analytics() {
+    $(window).hashchange(function() {
+        if (window.location.hash.indexOf('#/') > -1) {
+            if (gaCrumb.indexOf('#') > -1) {
+                gaCrumb = gaCrumb.split('#')[0];
+            }
+            ga('send', 'pageview', gaCrumb + '/' + window.location.hash);
+        }
+    });
+}
