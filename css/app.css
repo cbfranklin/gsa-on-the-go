@@ -120,6 +120,12 @@ textarea {
     vertical-align: middle;
     padding-left: 60px;
 }
+.hero-inner a,
+.hero-inner a:active,
+.hero-inner a:visited{
+    color:#fff;
+    text-decoration: none;
+}
 
 .hero-insite {
     display: table-cell;
@@ -803,3 +809,4 @@ a:hover {
         transform: translate3d(300px, 0, 0);
     }
 }
+
