@@ -126,8 +126,11 @@
                     <iframe id="form-target" name="form-target" style="width:0px; height:0px; border:0px;"></iframe>
                     <script>
                     $(function() {
-                        $("body").on("click", ".google-form input[type=submit]", function() {
+                        $("body").on("click", ".google-form input[type=submit]",function(){
                             router.navigate('/thankyou');
+                            setTimeout(function(){
+                                $('.google-form textarea').val('');
+                            },1000)
                         });
                     });
                     </script>
