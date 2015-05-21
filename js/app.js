@@ -28,12 +28,7 @@ function app() {
                 return !obj['is-site'];
             })
 
-            if(isMobile.any()){
-                var swipeTemplate = $('#templates .swipe-list-mobile').html();
-            }
-            else{
-                var swipeTemplate = $('#templates .swipe-list-desktop').html()
-            }
+            var swipeTemplate = $('#templates .swipe-list').html()
 
             var rendered_list_1 = Mustache.to_html(swipeTemplate, {
                 apps: list_apps
