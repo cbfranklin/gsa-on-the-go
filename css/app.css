@@ -193,7 +193,11 @@ nav {
     transition: all 0.3s ease;
 }
 nav.active {
-    left: 0;
+    -moz-transform: translate3d(300px,0,0);
+    -webkit-transform: translate3d(300px,0,0);
+    -o-transform: translate3d(300px,0,0);
+    -ms-transform: translate3d(300px,0,0);
+    transform: translate3d(300px,0,0);
 }
 .hero {
     width: 100%;
@@ -684,4 +688,21 @@ a:hover {
 }
 #swipe-list,#swipe-list-2{
     height:130px;
+}
+
+@media (min-width:480px){
+    .container{
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .container.nav-active{
+        -moz-transform: translate3d(300px,0,0);
+        -webkit-transform: translate3d(300px,0,0);
+        -o-transform: translate3d(300px,0,0);
+        -moz-transform: translate3d(300px,0,0);
+        transform: translate3d(300px,0,0);
+    }
 }
