@@ -93,13 +93,13 @@ function app() {
         var url = $(this).attr('href');
         if (url.indexOf('http') > -1) {
             if (url.indexOf('gsa.gov') === -1) {
-                ga('send', 'event', 'outbound', 'click', url, {
+                ga('send', 'event', 'outbound-link', 'click', url, {
                     'hitCallback': function() {
                         document.location = url;
                     }
                 });
             } else {
-                ga('send', 'event', 'subdomain', 'click', url, {
+                ga('send', 'event', 'subdomain-link', 'click', url, {
                     'hitCallback': function() {
                         document.location = url;
                     }
