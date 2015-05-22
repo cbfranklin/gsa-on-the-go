@@ -1,5 +1,5 @@
 var router;
-var gaCrumb = '/onthego-test/';
+var gaCrumb = '/onthego/';
 var gaDimensions = {};
 
 function app() {
