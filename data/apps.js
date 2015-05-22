@@ -15,7 +15,7 @@ var apps = [
 	},
 	{
 		"name":"aloha",
-		"display-name":"ALOHA",
+		"display-name":"ALOHA*",
 		"icon":"img/icons/aloha.png",
 		"link":"http://aloha.gsa.gov/",
 		"is-site":true
@@ -29,7 +29,7 @@ var apps = [
 	},	
 	{
 		"name":"feddesk",
-		"display-name":"FEDdesk",
+		"display-name":"FEDdesk*",
 		"icon":"img/icons/feddesk.png",
 		"link":"http://feddesk.gsa.gov/",
 		"is-site":true
