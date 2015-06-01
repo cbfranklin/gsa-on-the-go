@@ -89,25 +89,6 @@ function app() {
         var req = 'app-info/' + findByName[0].name + '.html';
         $('.app-info-body').load(req);
     });
-    $('body').on('click', 'a', function(e) {
-        var url = $(this).attr('href');
-        if (url.indexOf('http') > -1) {
-            if (url.indexOf('gsa.gov') === -1) {
-                ga('send', 'event', 'outbound-link', 'click', url, {
-                    'hitCallback': function() {
-                        document.location = url;
-                    }
-                });
-            } else {
-                ga('send', 'event', 'subdomain-link', 'click', url, {
-                    'hitCallback': function() {
-                        document.location = url;
-                    }
-                });
-            }
-            e.preventDefault();
-        }
-    })
 
     $('body').on('click','.container.nav-active',function(){
         $('nav,.menu-toggle').removeClass('active');
@@ -119,7 +100,13 @@ function app() {
             if (gaCrumb.indexOf('#') > -1) {
                 gaCrumb = gaCrumb.split('#')[0];
             }
-            ga('send', 'pageview', gaCrumb + '/' + window.location.hash);
+            setTimeout(function(){
+                var pageName = $('h2:visible').text() + $('h3:visible').text();
+                console.log('pageName',pageName)
+                ga('send', 'pageview', gaCrumb + '/' + window.location.hash, null, pageName+' | GSA On The Go');
+                var title = pageName+' | GSA On The Go';
+                document.title = title;
+            },500)
         }
     });
 }
@@ -147,13 +134,15 @@ function platformSpecific() {
         for (i in apps) {
             if (apps[i]['link-download']) {
                 apps[i]['link-download-platform'] = apps[i]['link-download']['android'];
+                apps[i]['platform'] = 'android';
             }
         }
     }
     if (isMobile.iOS()) {
         for (i in apps) {
             if (apps[i]['link-download']) {
-                apps[i]['link-download-platform'] = apps[i]['link-download']['ios'];
+                apps[i]['link-download-platform'] = apps[i]['link-download']['apple'];
+                apps[i]['platform'] = 'apple';
             }
         }
     }

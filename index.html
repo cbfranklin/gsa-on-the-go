@@ -139,7 +139,7 @@
                         <h3><a href="{{link-download-platform}}">{{display-name}}</a></h3></div>
                 </div>
                 <hr>
-                <a href="{{link-download-platform}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a> {{/link-download-platform}} {{^link-download-platform}}
+                <a data-app-string="{{name}}-{{platform}}" href="{{link-download-platform}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a> {{/link-download-platform}} {{^link-download-platform}}
                 <div class="col-xs-3 col-sm-2 col-md-1">
                     <img class="icon" src="{{icon}}">
                 </div>
@@ -147,8 +147,8 @@
                     <h3>{{display-name}}</h3></div>
             </div>
             <hr>
-            <a href="{{link-download.ios}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Apple App Store</a>
-            <a href="{{link-download.android}}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Google Play Store</a> {{/link-download-platform}}
+            <a data-app-string="{{name}}-apple" href="{{link-download.apple}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Apple App Store</a>
+            <a data-app-string="{{name}}-android" href="{{link-download.android}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Google Play Store</a> {{/link-download-platform}}
     </div>
     <hr>
     <div class="app-info-body"></div>
