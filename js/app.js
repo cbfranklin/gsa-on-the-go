@@ -19,6 +19,8 @@ function app() {
 
     router = new Grapnel();
     router.get('', function(req) {
+        var title = 'GSA On The Go';
+        document.title = title;
         $('section').hide();
         if ($('#swipe-list').is(':empty')) {
             var list_sites = apps.filter(function(obj) {
@@ -48,18 +50,17 @@ function app() {
         }
         $('#app-list-page').show();
     });
-    router.get('/', function(req) {
-        router.navigate('');
-    })
-    router.get('/apps', function(req) {
+    /*router.get('/apps', function(req) {
         router.navigate('');
     })
     router.get('undefined', function(req) {
         router.navigate('');
-    })
+    })*/
     router.get('/help', function(req) {
         $('section').hide();
         $('#help-page').show();
+        var title = 'Help Lines & Support | GSA On The Go';
+        document.title = title;
     })
     router.get('/feedback', function(req) {
         $('section').hide();
@@ -70,10 +71,14 @@ function app() {
                 $('.google-form textarea').val('');
             }, 1000)
         });
+        var title = 'Feedback | GSA On The Go';
+        document.title = title;
     })
     router.get('/thankyou', function(req) {
         $('section').hide();
         $('#thankyou').show();
+        var title = 'Thank You | GSA On The Go';
+        document.title = title;
     })
     router.get('/apps/:name', function(req) {
         $('section').hide();
@@ -88,27 +93,32 @@ function app() {
         $('#app-info-page').html(rendered_html);
         var req = 'app-info/' + findByName[0].name + '.html';
         $('.app-info-body').load(req);
+        var title = findByName[0]['display-name'] + ' | GSA On The Go';
+        document.title = title;
     });
 
-    $('body').on('click','.container.nav-active',function(){
+    $('body').on('click', '.container.nav-active', function() {
         $('nav,.menu-toggle').removeClass('active');
         $('.container').removeClass('nav-active')
     })
 
-    router.on('navigate', function(event) {
-        if (window.location.hash.indexOf('#/') > -1) {
-            if (gaCrumb.indexOf('#') > -1) {
-                gaCrumb = gaCrumb.split('#')[0];
+    router.on('hashchange', function(event) {
+        if (window.location.hash.indexOf('undefined') === -1) {
+            if (typeof ga !== "undefined") {
+                ga('send', 'pageview', gaCrumb + window.location.hash, null, document.title);
+            } else {
+                console.log('send', 'pageview', gaCrumb + window.location.hash, null, document.title)
             }
-            setTimeout(function(){
-                var pageName = $('h2:visible').text() + $('h3:visible').text();
-                console.log('pageName',pageName)
-                ga('send', 'pageview', gaCrumb + '/' + window.location.hash, null, pageName+' | GSA On The Go');
-                var title = pageName+' | GSA On The Go';
-                document.title = title;
-            },500)
         }
     });
+}
+
+function trackInitialPageView() {
+    if (typeof ga !== "undefined") {
+        ga('send', 'pageview', gaCrumb + window.location.hash, null, document.title);
+    } else {
+        console.log('send', 'pageview', gaCrumb + window.location.hash, null, document.title)
+    }
 }
 
 var isMobile = {
