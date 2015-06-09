@@ -80,6 +80,12 @@ function app() {
         var title = 'Thank You | GSA On The Go';
         document.title = title;
     })
+    router.get('/mobile-vpn', function(req) {
+        $('section').hide();
+        $('#mobile-vpn').show();
+        var title = 'Mobile VPN | GSA On The Go';
+        document.title = title;
+    })
     router.get('/apps/:name', function(req) {
         $('section').hide();
         $('#app-info-page').show();

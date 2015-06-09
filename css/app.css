@@ -789,6 +789,14 @@ a:hover {
 #swipe-list-2 {
     height: 130px;
 }
+.mobile-vpn-app{
+    text-align:center;
+    padding-top:50px;
+}
+.mobile-vpn-app img{
+    width:100px;
+    height:100px;
+}
 
 @media (min-width: 480px) {
     .container {
