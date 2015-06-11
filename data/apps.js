@@ -28,13 +28,6 @@ var apps = [
 		"is-site":true
 	},	
 	{
-		"name":"feddesk",
-		"display-name":"FEDdesk*",
-		"icon":"img/icons/feddesk.png",
-		"link":"http://feddesk.gsa.gov/",
-		"is-site":true
-	},
-	{
 		"name":"adobe-connect",
 		"display-name":"Adobe Connect",
 		"icon":"img/icons/adobe_connect.jpg",
