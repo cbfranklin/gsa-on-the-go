@@ -10,7 +10,7 @@ var apps = [
 		"name":"1800f-shuttle",
 		"display-name":"1800 F Shuttle",
 		"icon":"img/icons/EIGHTEEN-HUNDRED-SPACE-EFF.png",
-		"link":"http://www.gsa.gov/dcshuttle ",
+		"link":"http://m.gsa.gov/m/apps/1800f-shuttle/",
 		"is-site":true
 	},
 	{
