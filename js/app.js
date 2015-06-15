@@ -239,11 +239,11 @@ function app() {
                                 $(telEntry).insertAfter('.addresses #' + cardID + ' div.address');
                                 if (p.phoneNumber != null) {
                                     $('.addresses #' + cardID + ' span.tel strong').html('Tel: ');
-                                    $('.addresses #' + cardID + ' span.tel a').html(staffDirectoryformatNumber(p.phoneNumber)).attr('href', 'tel:1' + p.phoneNumber);
+                                    $('.addresses #' + cardID + ' span.tel a').html(staffDirectoryFormatNumber(p.phoneNumber)).attr('href', 'tel:1' + p.phoneNumber);
                                 }
                                 if (p.faxNumber != null) {
                                     $('.addresses #' + cardID + ' span.fax strong').html('Fax: ');
-                                    $('.addresses #' + cardID + ' span.fax a').html(staffDirectoryformatNumber(p.faxNumber)).attr('href', 'tel:1' + p.faxNumber);
+                                    $('.addresses #' + cardID + ' span.fax a').html(staffDirectoryFormatNumber(p.faxNumber)).attr('href', 'tel:1' + p.faxNumber);
                                 }
                             }
                         },
