@@ -110,11 +110,10 @@ function app() {
         $('form input, form select').val('');
 
         $('#searchSwitch button').click(function() {
-            //$('#searches > form,#searches > div, #keyContacts').hide();
+            $('#searches > form,#searches > div').toggle();
             $('#searchSwitch button').toggleClass('active');
             var id = $(this).attr('id');
             $('#searches .' + id).show();
-            $(this).addClass('active');
             if (id === 'staffDirectory') {
                 $('#results').show();
             } else if (id === 'byTopic') {
