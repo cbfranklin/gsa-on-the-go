@@ -815,3 +815,199 @@ a:hover {
     }
 }
 
+/*STAFF DIRECTORY CONTACTS*/
+ul.addresses {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none; }
+
+ul.addresses li {
+  padding: 10px 0 15px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px; }
+
+ul.addresses li img {
+  display: none; }
+
+ul.addresses div {
+  overflow: hidden; }
+
+ul.addresses span {
+  display: block;
+  overflow: hidden; }
+
+ul.addresses div.name .name {
+  font-weight: bold; }
+
+ul.addresses div.top, div.bottom, div.office {
+  overflow: hidden;
+  width: 100%; }
+
+ul.addresses .address {
+  float: left; }
+
+ul.addresses div.tel {
+  float: right; }
+
+ul.addresses span.title {
+  font-style: italic; }
+
+ul.addresses .email {
+  float: none;
+  clear: both; }
+
+ul.addresses div.tel strong {
+  display: inline-block;
+  width: 40px; }
+
+@media (max-width: 979px) {
+  ul.addresses li {
+    margin: 0 auto;
+    width: 100%; }
+
+  ul.addresses li {
+    margin-bottom: 10px; } }
+@media (max-width: 479px) {
+  ul.addresses div.tel, ul.addresses div.address {
+    float: none; }
+
+  ul.addresses div.tel {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee; } }
+/* CARDS */
+ul.addresses.cards {
+  position: relative;
+  z-index: 1;
+  display: block;
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #ddd;
+  list-style: none; }
+
+ul.addresses.cards li {
+  position: relative;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  min-height: 100px;
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.05);
+  font-size: 14px; }
+
+ul.addresses.cards li:before, ul.addresses.cards li:after {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  z-index: -1;
+  max-width: 300px;
+  /* avoid rotation causing ugly appearance at large container widths */
+  max-height: 100px;
+  width: 70%;
+  height: 55%;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  content: '';
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg); }
+
+ul.addresses.cards li:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg); }
+
+ul.cards li img {
+  display: block;
+  float: left;
+  width: 55px;
+  height: 50px;
+  border: none; }
+
+ul.addresses.cards div {
+  overflow: hidden; }
+
+ul.addresses.cards span {
+  display: block;
+  overflow: hidden; }
+
+ul.addresses.cards div.name {
+  padding-top: 5px;
+  padding-left: 10%; }
+
+ul.addresses.cards div.name .name {
+  font-weight: bold;
+  font-size: 14px; }
+
+ul.addresses.cards div.top, div.bottom, div.office {
+  overflow: hidden;
+  width: 100%; }
+
+ul.addresses.cards div.bottom {
+  padding-top: 10px;
+  border-top: 1px solid #eee; }
+
+ul.addresses.cards div.bottom, div.office {
+  margin-top: 15px; }
+
+ul.addresses.cards div.office {
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-weight: bold; }
+
+ul.addresses.cards .address {
+  float: left; }
+
+ul.addresses.cards div.tel {
+  float: right; }
+
+ul.addresses.cards div.tel span.gsa {
+  text-align: right; }
+
+ul.addresses.cards div.address .gsa {
+  font-weight: bold; }
+
+ul.addresses.cards .email {
+  float: none;
+  clear: both; }
+
+ul.addresses.cards div.tel strong {
+  display: inline-block;
+  width: 40px; }
+
+.prevSearches {
+  display: none; }
+
+@media (max-width: 979px) {
+  ul.addresses.cards li {
+    margin: 0 auto;
+    width: 90%; }
+
+  ul.addresses.cards li {
+    margin-bottom: 10px; } }
+@media (max-width: 479px) {
+  ul.addresses.cards div.tel, ul.addresses.cards div.address {
+    float: none; }
+
+  ul.addresses.cards div.tel {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee; } }
+
