@@ -110,8 +110,8 @@ function app() {
         $('form input, form select').val('');
 
         $('#searchSwitch button').click(function() {
-            $('#searches > form,#searches > div, #keyContacts').hide();
-            $('#searchSwitch button').removeClass('active');
+            //$('#searches > form,#searches > div, #keyContacts').hide();
+            $('#searchSwitch button').toggleClass('active');
             var id = $(this).attr('id');
             $('#searches .' + id).show();
             $(this).addClass('active');
@@ -192,7 +192,7 @@ function app() {
             }
 
             this.request = function() {
-                if (contactGroup === 'none') {
+                if (contactGroup === 'none' || contactGroup === null) {
                     return baseURL + this.firstNameR + this.lastNameR + this.stateR + this.zipR;
                 } else {
                     return groupURL + '/' + contactGroup;
@@ -206,7 +206,7 @@ function app() {
                 }
             }
             this.feedback = function() {
-                if (contactGroup === 'none') {
+                if (contactGroup === 'none' || contactGroup === null) {
                     return this.lastName + ' ' + this.firstName + ' ' + this.state + ' ' + this.zip;
                 } else {
                     return contactGroup.split('%20').join(' ');
@@ -216,11 +216,9 @@ function app() {
 
         function staffDirectorySearchAPI(theRequest) {
             $.getJSON(theRequest, function(json) {
-                    console.log(json);
 
                     if (theQuery.isGroup() === true) {
                         if (json.gsaContactGroup[0] === undefined) {
-                            console.log('NO RESULTS');
                             staffDirectoryLoaded(false);
                             return;
                         } else {
@@ -231,7 +229,6 @@ function app() {
                     }
 
                     if (data.length == 0) {
-                        console.log('NO RESULTS');
                         staffDirectoryLoaded(false);
                         return;
                     }
