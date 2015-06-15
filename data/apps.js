@@ -111,8 +111,8 @@ var apps = [
 		"display-name":"Google Drive",
 		"icon":"img/icons/drive.jpg",
 		"link-download": {
-			"apple":"",
-			"android":""
+			"apple":"https://itunes.apple.com/us/app/google-drive-free-online-storage/id507874739?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs&hl=en"
 		},
 		"type":"google-app",
 		"instructions":true
@@ -122,8 +122,8 @@ var apps = [
 		"display-name":"Google Hangouts",
 		"icon":"img/icons/hangouts.jpg",
 		"link-download": {
-			"apple":"",
-			"android":""
+			"apple":"https://itunes.apple.com/us/app/hangouts-free-messaging-video/id643496868?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.talk&hl=en"
 		},
 		"type":"google-app",
 		"instructions":true
@@ -133,8 +133,8 @@ var apps = [
 		"display-name":"Google Sheets",
 		"icon":"img/icons/sheets.jpg",
 		"link-download": {
-			"apple":"",
-			"android":""
+			"apple":"https://itunes.apple.com/us/app/google-sheets/id842849113?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets&hl=en"
 		},
 		"type":"google-app",
 		"instructions":true
@@ -144,8 +144,8 @@ var apps = [
 		"display-name":"Google Slides",
 		"icon":"img/icons/slides.jpg",
 		"link-download": {
-			"apple":"",
-			"android":""
+			"apple":"https://itunes.apple.com/us/app/google-slides/id879478102?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.slides&hl=en"
 		},
 		"type":"google-app",
 		"instructions":true
@@ -155,8 +155,8 @@ var apps = [
 		"display-name":"Google Docs",
 		"icon":"img/icons/docs.jpg",
 		"link-download": {
-			"apple":"",
-			"android":""
+			"apple":"https://itunes.apple.com/us/app/google-docs/id842842640?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=en"
 		},
 		"type":"google-app",
 		"instructions":true
