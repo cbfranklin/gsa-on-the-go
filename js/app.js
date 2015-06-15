@@ -129,21 +129,6 @@ function app() {
             staffDirectorySearch();
             return false;
         });
-        $('.display-mode .cards').click(function() {
-            $('ul.addresses').addClass('cards');
-            $('.display-mode .cards').addClass('active');
-            $('.display-mode .list').removeClass('active');
-        });
-        $('.display-mode .list').click(function() {
-            $('ul.addresses').removeClass('cards');
-            $('.display-mode .list').addClass('active');
-            $('.display-mode .cards').removeClass('active');
-        });
-
-        if (window.location.href.indexOf('?feedback') > 0) {
-            $('button#feedbackForm').click();
-            console.log('?FEEDBACK');
-        }
 
         function staffDirectorySearch() {
             $('#load').show();
