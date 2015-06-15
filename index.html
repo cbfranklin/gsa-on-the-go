@@ -303,7 +303,7 @@
         <script type="template" class="swipe-list">
             {{#apps}}
             <div class="{{name}}">
-                <a {{#is-site}}href="{{link}}" target="_blank" {{/is-site}}{{^is-site}}href="#/apps/{{name}}" {{/is-site}} role="button">
+                <a {{^instructions}}href="{{link}}" target="_blank" {{/instructions}}{{#instructions}}href="#/apps/{{name}}" {{/instructions}} role="button">
                     <img src="{{icon}}" />
                     <small>{{display-name}}</small>
                 </a>

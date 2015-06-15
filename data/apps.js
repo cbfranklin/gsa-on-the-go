@@ -4,28 +4,29 @@ var apps = [
 		"display-name":"Mobile GSA",
 		"icon":"img/icons/mgsa.png",
 		"link":"http://m.gsa.gov/m/",
-		"is-site":true
+		"type":"site"
 	},
 	{
 		"name":"1800f-shuttle",
 		"display-name":"1800 F Shuttle",
 		"icon":"img/icons/EIGHTEEN-HUNDRED-SPACE-EFF.png",
 		"link":"http://m.gsa.gov/m/apps/1800f-shuttle/",
-		"is-site":true
+		"type":"site"
 	},
 	{
 		"name":"aloha",
 		"display-name":"ALOHA*",
 		"icon":"img/icons/aloha.png",
 		"link":"http://aloha.gsa.gov/",
-		"is-site":true
+		"type":"site",
+		"instructions":true
 	},
 	{
 		"name":"employee-express",
 		"display-name":"Employee Express",
 		"icon":"img/icons/employee_express.png",
 		"link":"https://www.employeeexpress.gov/",
-		"is-site":true
+		"type":"site"
 	},	
 	{
 		"name":"adobe-connect",
@@ -34,7 +35,9 @@ var apps = [
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/adobe-connect-mobile/id430437503?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=air.com.adobe.connectpro&hl=en"
-		}
+		},
+		"type":"app",
+		"instructions":true
 	},
 	{
 		"name":"anyconnect",
@@ -43,7 +46,9 @@ var apps = [
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/cisco-anyconnect/id392790924?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.cisco.anyconnect.vpn.android.avf"
-		}
+		},
+		"type":"app",
+		"instructions":true
 	},
 	{
 		"name":"bookit",
@@ -52,7 +57,9 @@ var apps = [
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/onboard-mobile/id593139155?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.agilquest.onboard.mobile1&hl=en"
-		}
+		},
+		"type":"app",
+		"instructions":true
 	},
 	{
 		"name":"gsa-perdiem",
@@ -62,7 +69,9 @@ var apps = [
 		"link-download":{
 			"apple":"https://itunes.apple.com/us/app/per-diem-for-continental-u.s/id438535861?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=gov.gsa.android.perdiem",
-		}
+		},
+		"type":"app",
+		"instructions":true
 	},
 	{
 		"name":"myview",
@@ -71,7 +80,9 @@ var apps = [
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/vmware-horizon-client/id417993697?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.vmware.view.client.android&hl=en"
-		}
+		},
+		"type":"app",
+		"instructions":true
 	},
 	{
 		"name":"salesforce",
@@ -80,7 +91,9 @@ var apps = [
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/salesforce1/id404249815?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.salesforce.chatter&hl=en"
-		}
+		},
+		"type":"app",
+		"instructions":true
 	},
 	{
 		"name":"secureauth-otp",
@@ -89,6 +102,63 @@ var apps = [
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/secureauth-otp/id615536686?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=secureauth.android.token"
-		}
+		},
+		"type":"app",
+		"instructions":true
 	},
+	{
+		"name":"google-drive",
+		"display-name":"Google Drive",
+		"icon":"img/icons/drive.jpg",
+		"link-download": {
+			"apple":"",
+			"android":""
+		},
+		"type":"google-app",
+		"instructions":true
+	},
+	{
+		"name":"google-hangouts",
+		"display-name":"Google Hangouts",
+		"icon":"img/icons/hangouts.jpg",
+		"link-download": {
+			"apple":"",
+			"android":""
+		},
+		"type":"google-app",
+		"instructions":true
+	},
+	{
+		"name":"google-sheets",
+		"display-name":"Google Sheets",
+		"icon":"img/icons/sheets.jpg",
+		"link-download": {
+			"apple":"",
+			"android":""
+		},
+		"type":"google-app",
+		"instructions":true
+	},
+	{
+		"name":"google-slides",
+		"display-name":"Google Slides",
+		"icon":"img/icons/slides.jpg",
+		"link-download": {
+			"apple":"",
+			"android":""
+		},
+		"type":"google-app",
+		"instructions":true
+	},
+	{
+		"name":"google-docs",
+		"display-name":"Google Docs",
+		"icon":"img/icons/docs.jpg",
+		"link-download": {
+			"apple":"",
+			"android":""
+		},
+		"type":"google-app",
+		"instructions":true
+	}
 ]
