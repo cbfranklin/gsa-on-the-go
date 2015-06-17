@@ -133,8 +133,8 @@ var apps = [
 		"display-name":"Docs",
 		"icon":"img/icons/docs.jpg",
 		"link-download": {
-			"apple":"https://itunes.apple.com/us/app/google-sheets/id842849113?mt=8",
-			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets&hl=en"
+			"apple":"https://itunes.apple.com/us/app/google-docs/id842842640?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=en"
 		},
 		"type":"google",
 		"instructions":true
@@ -144,8 +144,8 @@ var apps = [
 		"display-name":"Sheets",
 		"icon":"img/icons/sheets.jpg",
 		"link-download": {
-			"apple":"https://itunes.apple.com/us/app/google-slides/id879478102?mt=8",
-			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.slides&hl=en"
+			"apple":"https://itunes.apple.com/us/app/google-sheets/id842849113?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets&hl=en"
 		},
 		"type":"google",
 		"instructions":true
@@ -155,8 +155,8 @@ var apps = [
 		"display-name":"Slides",
 		"icon":"img/icons/slides.jpg",
 		"link-download": {
-			"apple":"https://itunes.apple.com/us/app/google-docs/id842842640?mt=8",
-			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=en"
+			"apple":"https://itunes.apple.com/us/app/google-slides/id879478102?mt=8",
+			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.slides&hl=en"
 		},
 		"type":"google",
 		"instructions":true
