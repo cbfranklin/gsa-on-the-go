@@ -56,11 +56,14 @@
                 <br>
             </p>
             <hr>
-            <h4>Sites</h4>
-            <div id="swipe-list-2"></div>
-            <hr>
             <h4>Apps</h4>
-            <div id="swipe-list"></div>
+            <div id="swipe-list-apps"></div>
+            <hr>
+            <h4>Sites</h4>
+            <div id="swipe-list-sites"></div>
+            <hr>
+            <h4>Google</h4>
+            <div id="swipe-list-google"></div>
             <hr>
             <!--<button class="btn btn-default btn-block btn-lg btn-navigation" data-nav="planner"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>A Link!</button>-->
         </section>
@@ -310,6 +313,25 @@
             </div>
             {{/apps}}
         </script>
+                <script type="template" class="site-info">
+            {{#app}}
+            <div class="app-info">
+                <div class="row app-info-header">
+                    <div class="col-xs-3 col-sm-2 col-md-1">
+                        <a href="{{link}}"><img class="icon" src="{{icon}}"></a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 col-md-11">
+                        <h3><a href="{{link}}">{{display-name}}</a></h3></div>
+                </div>
+                <hr>
+                <a href="{{link}}" target="_blank" class="btn btn-success btn-block"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>Go to Site</a>
+    </div>
+    <hr>
+    <div class="app-info-body"></div>
+    <hr>
+    <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
+    <hr> {{/app}}
+    </script>
         <script type="template" class="app-info">
             {{#app}}
             <div class="app-info">

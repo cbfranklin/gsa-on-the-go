@@ -108,57 +108,57 @@ var apps = [
 	},
 	{
 		"name":"google-drive",
-		"display-name":"Google Drive",
+		"display-name":"Drive",
 		"icon":"img/icons/drive.jpg",
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/google-drive-free-online-storage/id507874739?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs&hl=en"
 		},
-		"type":"google-app",
+		"type":"google",
 		"instructions":true
 	},
 	{
 		"name":"google-hangouts",
-		"display-name":"Google Hangouts",
+		"display-name":"Hangouts",
 		"icon":"img/icons/hangouts.jpg",
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/hangouts-free-messaging-video/id643496868?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.google.android.talk&hl=en"
 		},
-		"type":"google-app",
+		"type":"google",
 		"instructions":true
 	},
-	{
-		"name":"google-sheets",
-		"display-name":"Google Sheets",
-		"icon":"img/icons/sheets.jpg",
+		{
+		"name":"google-docs",
+		"display-name":"Docs",
+		"icon":"img/icons/docs.jpg",
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/google-sheets/id842849113?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets&hl=en"
 		},
-		"type":"google-app",
+		"type":"google",
 		"instructions":true
 	},
 	{
-		"name":"google-slides",
-		"display-name":"Google Slides",
-		"icon":"img/icons/slides.jpg",
+		"name":"sheets",
+		"display-name":"Sheets",
+		"icon":"img/icons/sheets.jpg",
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/google-slides/id879478102?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.slides&hl=en"
 		},
-		"type":"google-app",
+		"type":"google",
 		"instructions":true
 	},
 	{
-		"name":"google-docs",
-		"display-name":"Google Docs",
-		"icon":"img/icons/docs.jpg",
+		"name":"google-slides",
+		"display-name":"Slides",
+		"icon":"img/icons/slides.jpg",
 		"link-download": {
 			"apple":"https://itunes.apple.com/us/app/google-docs/id842842640?mt=8",
 			"android":"https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs&hl=en"
 		},
-		"type":"google-app",
+		"type":"google",
 		"instructions":true
 	}
 ]

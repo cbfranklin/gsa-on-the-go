@@ -22,25 +22,31 @@ function app() {
         var title = 'GSA On The Go';
         document.title = title;
         $('section').hide();
-        if ($('#swipe-list').is(':empty')) {
+        if ($('#swipe-list-apps').is(':empty')) {
             var list_sites = apps.filter(function(obj) {
-                return obj['is-site'] == true;
+                return obj['type'] === 'site';
             })
             var list_apps = apps.filter(function(obj) {
-                return !obj['is-site'];
+                return obj['type'] === 'app';
             })
-
+            var list_google = apps.filter(function(obj) {
+                return obj['type'] === 'google';
+            })
             var swipeTemplate = $('#templates .swipe-list').html()
 
-            var rendered_list_1 = Mustache.to_html(swipeTemplate, {
+            var rendered_list_apps = Mustache.to_html(swipeTemplate, {
                 apps: list_apps
             });
-            var rendered_list_2 = Mustache.to_html(swipeTemplate, {
+            var rendered_list_sites = Mustache.to_html(swipeTemplate, {
                 apps: list_sites
             });
-            $('#swipe-list').html(rendered_list_1);
-            $('#swipe-list-2').html(rendered_list_2);
-            $('#swipe-list,#swipe-list-2').owlCarousel({
+            var rendered_list_google = Mustache.to_html(swipeTemplate, {
+                apps: list_google
+            });
+            $('#swipe-list-sites').html(rendered_list_sites);
+            $('#swipe-list-apps').html(rendered_list_apps);
+            $('#swipe-list-google').html(rendered_list_google);
+            $('#swipe-list-sites,#swipe-list-apps,#swipe-list-google').owlCarousel({
                 itemsMobile: [479, 3],
                 itemsTablet: [767, 4],
                 itemsDesktopSmall: false,
@@ -93,9 +99,17 @@ function app() {
         var findByName = $.grep(apps, function(e) {
             return e.name == appName;
         });
-        var rendered_html = Mustache.to_html($('#templates .app-info').html(), {
-            app: findByName[0]
-        });
+        var appData = findByName[0];
+        if (appData.type === 'site') {
+            var rendered_html = Mustache.to_html($('#templates .site-info').html(), {
+                app: appData
+            });
+        } else {
+            var rendered_html = Mustache.to_html($('#templates .app-info').html(), {
+                app: appData
+            });
+        }
+
         $('#app-info-page').html(rendered_html);
         var req = 'app-info/' + findByName[0].name + '.html';
         $('.app-info-body').load(req);
@@ -286,7 +300,7 @@ function app() {
 
 
         var GSARoot = 'http://m.gsa.gov',
-        baseURL = GSARoot + '/api/rs/a',
+            baseURL = GSARoot + '/api/rs/a',
             groupURL = GSARoot + '/api/rs/group',
             addressCard = '<li><div class="top"><a href="#"><img alt="GSA" src="http://www.gsa.gov/graphics/staffoffices/GSAStarMarkweblogopolicy3333.jpg"></a><div class="name"><span class="name"></span><span class="title"></span></div></div><div class="bottom"><div class="address"><span class="address"></span><span class="email"><a href="mailto:"></a></span></div></div></li>',
             telEntry = '<div class="tel"><span class="tel"><strong></strong><a href=""></a></span><span class="fax"><strong></strong><a href="tel+1"></a></span></div>';
