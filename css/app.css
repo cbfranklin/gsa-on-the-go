@@ -443,66 +443,9 @@ a:hover {
     display: block;
 }
 
-#intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    color: #fff;
-    z-index: 1000;
-    background-color: #333;
-}
-
-#intro .slick-list,
-#intro .slick-track,
-#intro .slick-slide > div {
-    height: 100%;
-}
-
-#intro .slick-slide > div {
-    height: 98%;
-    padding-top: 2%;
-    width: 95%;
-    overflow: hidden;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#intro ul {
-    margin: 0 auto;
-    max-width: 480px;
-    padding: 0;
-}
-
-#intro ul li {
-    list-style-position: inside
-}
-
-#intro div img {
-    display: inline;
-}
-
-#intro .slide-one {
-    background-color: #263092;
-}
-
-#intro .slide-two {
-    background-color: #286090;
-}
-
-#intro .slide-three {
-    background-color: #31B0D5;
-}
-
-#intro .glyphicon {
-    float: none;
-}
-
-#intro p,
-#intro li {
-    font-size: 16px;
+hr{
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 .btn-group-options .btn .glyphicon {
