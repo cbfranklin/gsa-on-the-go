@@ -139,7 +139,7 @@ var apps = [
 		"instructions":true
 	},
 	{
-		"name":"sheets",
+		"name":"google-sheets",
 		"display-name":"Sheets",
 		"icon":"img/icons/sheets.jpg",
 		"link-download": {
