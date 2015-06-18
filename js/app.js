@@ -165,7 +165,7 @@ function app() {
     $('#staffDir-reults-container').hide();
     $('#staffDir-search-container input, #staffDir-search-container select').val('');
     $('#staffDir-search-container').show();
- }
+ });
 
 
     })
