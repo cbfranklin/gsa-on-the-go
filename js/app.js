@@ -199,7 +199,7 @@ function staffDirectorySearch() {
                 results = results.sort(function(a, b) {
                     var sortNameA = a.lastName + ' ' + a.firstName;
                     var sortNameB = b.lastName + ' ' + b.firstName;
-                    return sortNameA / toLowerCase().localeCompare(sortNameB.toLowerCase());
+                    return sortNameA.toLowerCase().localeCompare(sortNameB.toLowerCase());
                 });
                 var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
                     results: results
