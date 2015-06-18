@@ -121,10 +121,10 @@ function app() {
         $('section').hide();
         $('#staff-directory').show();
 
-        Mousetrap.bindGlobal(['enter'], function(e) {
+        Mousetrap.bind(['enter'], function(e) {
         if ($('#staffDir-search-container').is(":visible")) {
             $('#staffDir-search').click();
-        }
+        } 
     });
 
         $('body').on('click', '#staffDir-search', function() {
