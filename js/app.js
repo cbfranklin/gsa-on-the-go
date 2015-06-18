@@ -138,13 +138,13 @@ function app() {
 
                 console.log(staffDirZip,staffDirState,staffDirFirstName,staffDirLastName)
 
-            if (staffDirFirstName !== '') {
-                apiReq += '/fn/' + staffDirFirstName;
-                reqSummary += ' ' + staffDirFirstName;
-            }
             if (staffDirLastName !== '') {
                 apiReq += '/ln/' + staffDirLastName;
                 reqSummary += ' ' + staffDirLastName;
+            }
+            if (staffDirFirstName !== '') {
+                apiReq += '/fn/' + staffDirFirstName;
+                reqSummary += ' ' + staffDirFirstName;
             }
             if (staffDirState !== '') {
                 apiReq += '/st/' + staffDirState;
@@ -160,7 +160,7 @@ function app() {
                 var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
                     results: results
                 });
-                $('#staff-directory .results').html(rendered_html);
+                $('#staff-directory .results').html(staffdir_html);
 
             });
         })
