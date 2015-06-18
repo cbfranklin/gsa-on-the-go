@@ -161,7 +161,7 @@ function app() {
                     $('#staffDir-results-container').html(staffdir_html);
                 }
                 else{
-                     $('#staffDir-results-container').html('<p>No Results</p><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+                     $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
                 }
                
                 $('#staffDir-load').hide();
