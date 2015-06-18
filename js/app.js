@@ -149,11 +149,7 @@ function app() {
 
     router.on('hashchange', function(event) {
         if (window.location.hash.indexOf('undefined') === -1) {
-            if (typeof ga !== "undefined") {
-                ga('send', 'pageview', gaCrumb + window.location.hash, null, document.title);
-            } else {
-                console.log('send', 'pageview', gaCrumb + window.location.hash, null, document.title)
-            }
+            trackPageView();
         }
     });
 
@@ -225,11 +221,13 @@ function staffDirectorySearch() {
     })
 }
 
-function trackInitialPageView() {
+function trackPageView() {
+    var hash = window.location.hash;
+    if (hash === '#/' || hash === '#') hash = '';
     if (typeof ga !== "undefined") {
-        ga('send', 'pageview', gaCrumb + window.location.hash, null, document.title);
+        ga('send', 'pageview', gaCrumb + hash, null, document.title);
     } else {
-        console.log('send', 'pageview', gaCrumb + window.location.hash, null, document.title)
+        console.log('send', 'pageview', gaCrumb + hash, null, document.title)
     }
 }
 
