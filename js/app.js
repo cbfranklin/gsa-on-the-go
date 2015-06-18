@@ -153,6 +153,7 @@ function app() {
             }
             $.getJSON(apiReq, function(data) {
                 var results = data.gsaAssociate;
+                console.log(results)
                 if (results.length > 0) {
                     var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
                         results: results
