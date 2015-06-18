@@ -159,7 +159,10 @@ function app() {
                     });
                     $('#staffDir-results-container').html(staffdir_html);
                 }
-                $('#staffDir-results-container').html('<p>No Results</p><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+                else{
+                     $('#staffDir-results-container').html('<p>No Results</p><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+                }
+               
                 $('#staffDir-load').hide();
                 $('#staffDir-results-container').show();
             });
