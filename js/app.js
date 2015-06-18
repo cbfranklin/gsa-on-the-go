@@ -14,7 +14,7 @@ function app() {
 
     Mousetrap.bind('enter', function(e) {
         staffDirectorySearch();
-        return false;
+        e.preventDefault();
     });
 
     router = new Grapnel();
