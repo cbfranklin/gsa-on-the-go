@@ -148,6 +148,7 @@ function app() {
     })
 
     router.on('hashchange', function(event) {
+        console.log('hashchange')
         if (window.location.hash.indexOf('undefined') === -1) {
             trackPageView();
         }
