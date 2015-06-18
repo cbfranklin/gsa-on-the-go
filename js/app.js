@@ -122,10 +122,10 @@ function app() {
         $('#staff-directory').show();
 
         Mousetrap.bind(['enter'], function(e) {
-        if ($('#staffDir-search-container').is(":visible")) {
-            $('#staffDir-search').click();
-        } 
-    });
+            if ($('#staffDir-search-container').is(":visible")) {
+                $('#staffDir-search').click();
+            }
+        });
 
         $('body').on('click', '#staffDir-search', function() {
             $('#staffDir-search-container').hide();
@@ -157,26 +157,28 @@ function app() {
                 apiReq += '/zip/' + staffDirZip;
                 reqSummary += ' ' + staffDirZip;
             }
-            console.log(reqSummary,apiReq)
-            $.getJSON(apiReq, function(data) {
-                var results = data.gsaAssociate;
-                console.log(results)
-                if (results.length > 0) {
-                    var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
-                        results: results
-                    });
-                    $('#staffDir-results-container').html(staffdir_html);
+            console.log(reqSummary, apiReq)
+            $.getJSON(apiReq, function(data, status) {
+                if (status == "success") {
+                    var results = data.gsaAssociate;
+                    console.log(results)
+                    if (results.length > 0) {
+                        var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
+                            results: results
+                        });
+                        $('#staffDir-results-container').html(staffdir_html);
+                    } else {
+                        $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+                    }
+                } else {
+                    $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
                 }
-                else{
-                     $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
-                }
-               
                 $('#staffDir-load').hide();
                 $('#staffDir-results-container').show();
             });
         })
         $('body').on('click', '#staffDir-search-again', function() {
-            window.scrollTo(0,0);
+            window.scrollTo(0, 0);
             $('#staffDir-results-container').html('').hide();
             $('#staffDir-search-container input, #staffDir-search-container select').val('');
             $('#staffDir-search-container').show();
