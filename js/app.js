@@ -158,35 +158,33 @@ function app() {
                 reqSummary += ' ' + staffDirZip;
             }
             console.log(reqSummary, apiReq)
-            $.getJSON(apiReq, function(data, status) {
 
 
-                $.ajax({
-                    url: apiReq,
-                    dataType: "json",
-                    success: function(data) {
-                        var results = data.gsaAssociate;
-                        console.log(results)
-                        if (results.length > 0) {
-                            var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
-                                results: results
-                            });
-                            $('#staffDir-results-container').html(staffdir_html);
-                        } else {
-                            $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
-                        }
-                        $('#staffDir-load').hide();
-                        $('#staffDir-results-container').show();
-                    },
-                    error: function(data) {
+            $.ajax({
+                url: apiReq,
+                dataType: "json",
+                success: function(data) {
+                    var results = data.gsaAssociate;
+                    console.log(results)
+                    if (results.length > 0) {
+                        var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
+                            results: results
+                        });
+                        $('#staffDir-results-container').html(staffdir_html);
+                    } else {
                         $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
-                        $('#staffDir-load').hide();
-                        $('#staffDir-results-container').show();
                     }
+                    $('#staffDir-load').hide();
+                    $('#staffDir-results-container').show();
+                },
+                error: function(data) {
+                    $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+                    $('#staffDir-load').hide();
+                    $('#staffDir-results-container').show();
+                }
 
-                })
+            })
 
-            });
         })
         $('body').on('click', '#staffDir-search-again', function() {
             window.scrollTo(0, 0);
