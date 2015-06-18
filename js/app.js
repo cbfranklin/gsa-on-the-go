@@ -124,6 +124,9 @@ function app() {
         $('#staffDir-search-container').show();
         $('#staffDir-load').hide();
 
+        var title = 'Staff Directory | GSA On The Go';
+        document.title = title;
+
 
 
         $('body').on('click', '#staffDir-search', staffDirectorySearch);
