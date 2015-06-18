@@ -121,73 +121,12 @@ function app() {
         $('section').hide();
         $('#staff-directory').show();
 
-        Mousetrap.bind(['enter'], function(e) {
-            if ($('#staffDir-search-container').is(":visible")) {
-                $('#staffDir-search').click();
-            }
-        });
-
-        $('body').on('click', '#staffDir-search', function() {
-            $('#staffDir-search-container').hide();
-            $('#staffDir-load').show();
-            //var GSARoot = 'http://m.gsa.gov';
-            var GSARoot = 'http://dev.oagov.com:3000'
-
-            var staffDirBaseURL = GSARoot + '/api/rs/a',
-                apiReq = staffDirBaseURL,
-                reqSummary = '',
-                staffDirFirstName = $('#staffDir-firstName').val(),
-                staffDirLastName = $('#staffDir-lastName').val(),
-                staffDirState = $('#staffDir-state').val(),
-                staffDirZip = $('#staffDir-zip').val();
-
-            if (staffDirFirstName !== '') {
-                apiReq += '/fn/' + staffDirFirstName;
-                reqSummary += ' ' + staffDirFirstName;
-            }
-            if (staffDirLastName !== '') {
-                apiReq += '/ln/' + staffDirLastName;
-                reqSummary += ' ' + staffDirLastName;
-            }
-            if (staffDirState !== '') {
-                apiReq += '/st/' + staffDirState;
-                reqSummary += ' ' + staffDirState;
-            }
-            if (staffDirZip !== '') {
-                apiReq += '/zip/' + staffDirZip;
-                reqSummary += ' ' + staffDirZip;
-            }
-            console.log(reqSummary, apiReq)
 
 
-            $.ajax({
-                url: apiReq,
-                dataType: "json",
-                success: function(data) {
-                    var results = data.gsaAssociate;
-                    console.log(results)
-                    if (results.length > 0) {
-                        var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
-                            results: results
-                        });
-                        $('#staffDir-results-container').html(staffdir_html);
-                    } else {
-                        $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
-                    }
-                    $('#staffDir-load').hide();
-                    $('#staffDir-results-container').show();
-                    window.scrollTo(0, 0);
-                },
-                error: function(data) {
-                    $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
-                    $('#staffDir-load').hide();
-                    $('#staffDir-results-container').show();
-                    window.scrollTo(0, 0);
-                }
+        $('body').on('click', '#staffDir-search', staffDirectorySearch);
+        Mousetrap.bind(['enter'], staffDirectorySearch);
 
-            })
 
-        })
         $('body').on('click', '#staffDir-search-again', function() {
             window.scrollTo(0, 0);
             $('#staffDir-results-container').html('').hide();
@@ -213,6 +152,67 @@ function app() {
         }
     });
 
+}
+
+function staffDirectorySearch() {
+    $('#staffDir-search-container').hide();
+    $('#staffDir-load').show();
+    //var GSARoot = 'http://m.gsa.gov';
+    var GSARoot = 'http://dev.oagov.com:3000'
+
+    var staffDirBaseURL = GSARoot + '/api/rs/a',
+        apiReq = staffDirBaseURL,
+        reqSummary = '',
+        staffDirFirstName = $('#staffDir-firstName').val(),
+        staffDirLastName = $('#staffDir-lastName').val(),
+        staffDirState = $('#staffDir-state').val(),
+        staffDirZip = $('#staffDir-zip').val();
+
+    if (staffDirFirstName !== '') {
+        apiReq += '/fn/' + staffDirFirstName;
+        reqSummary += ' ' + staffDirFirstName;
+    }
+    if (staffDirLastName !== '') {
+        apiReq += '/ln/' + staffDirLastName;
+        reqSummary += ' ' + staffDirLastName;
+    }
+    if (staffDirState !== '') {
+        apiReq += '/st/' + staffDirState;
+        reqSummary += ' ' + staffDirState;
+    }
+    if (staffDirZip !== '') {
+        apiReq += '/zip/' + staffDirZip;
+        reqSummary += ' ' + staffDirZip;
+    }
+    console.log(reqSummary, apiReq)
+
+
+    $.ajax({
+        url: apiReq,
+        dataType: "json",
+        success: function(data) {
+            var results = data.gsaAssociate;
+            console.log(results)
+            if (results.length > 0) {
+                var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
+                    results: results
+                });
+                $('#staffDir-results-container').html(staffdir_html);
+            } else {
+                $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+            }
+            $('#staffDir-load').hide();
+            $('#staffDir-results-container').show();
+            window.scrollTo(0, 0);
+        },
+        error: function(data) {
+            $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+            $('#staffDir-load').hide();
+            $('#staffDir-results-container').show();
+            window.scrollTo(0, 0);
+        }
+
+    })
 }
 
 function trackInitialPageView() {
