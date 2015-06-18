@@ -126,7 +126,7 @@ function app() {
             //on search
             //build req
             //var GSARoot = 'http://m.gsa.gov';
-            var GSARoot = 'localhost:3000'
+            var GSARoot = 'http://dev.oagov.com:3000'
 
             var staffDirBaseURL = GSARoot + '/api/rs/a',
                 apiReq = staffDirBaseURL,
