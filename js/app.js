@@ -153,19 +153,22 @@ function app() {
             }
             $.getJSON(apiReq, function(data) {
                 var results = data.gsaAssociate;
-                var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
-                    results: results
-                });
-                $('#staffDir-results-container').html(staffdir_html);
+                if (results.length > 0) {
+                    var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
+                        results: results
+                    });
+                    $('#staffDir-results-container').html(staffdir_html);
+                }
+                $('#staffDir-results-container').html('<p>No Results</p>');
                 $('#staffDir-load').hide();
                 $('#staffDir-results-container').show();
             });
         })
- $('body').on('click', '#staffDir-search-again', function() {
-    $('#staffDir-reults-container').hide();
-    $('#staffDir-search-container input, #staffDir-search-container select').val('');
-    $('#staffDir-search-container').show();
- });
+        $('body').on('click', '#staffDir-search-again', function() {
+            $('#staffDir-reults-container').hide();
+            $('#staffDir-search-container input, #staffDir-search-container select').val('');
+            $('#staffDir-search-container').show();
+        });
 
 
     })
