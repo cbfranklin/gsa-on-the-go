@@ -151,7 +151,7 @@ function app() {
                 apiReq += '/zip/' + staffDirZip;
                 reqSummary += ' ' + staffDirZip;
             }
-            console.log(reqSummary)
+            console.log(reqSummary,apiReq)
             $.getJSON(apiReq, function(data) {
                 var results = data.gsaAssociate;
                 console.log(results)
