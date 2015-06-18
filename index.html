@@ -288,26 +288,26 @@
     </script>
     <script type="template" class="staff-directory">
         <div class="bootcards-list">
-  <div class="panel panel-default">
-    <div class="list-group">
-    {{#results}}
-      <a class="list-group-item" href="#">
-        <div class="row">
-          <div class="col-sm-6">
-            <i class="fa fa-3x fa-building-o pull-left"></i>
-            <h4 class="list-group-item-heading">{{lastName}},{{firstName}}</h4>
-            <p class="list-group-item-text">{{title}}</p>
-          </div>
-          <div class="col-sm-6">
-            <p class="list-group-item-text">tel: <a href="tel:+1{{phoneNumber}}">{{phoneNumber}}</a></p>
-            <p class="list-group-item-text"><a href="mailto:{{emailAddress}}">{{emailAddress}}</a></p>
-          </div>
+            <div class="panel panel-default">
+                <div class="list-group">
+                    {{#results}}
+                    <div class="list-group-item" href="#">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <i class="fa fa-3x fa-building-o pull-left"></i>
+                                <h4 class="list-group-item-heading">{{lastName}}, {{firstName}}</h4>
+                                <p class="list-group-item-text">{{title}}</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="list-group-item-text">tel: <a href="tel:+1{{phoneNumber}}">{{phoneNumber}}</a></p>
+                                <p class="list-group-item-text"><a href="mailto:{{emailAddress}}">{{emailAddress}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/results}}
+                </div>
+            </div>
         </div>
-      </a>
-      {{/results}}
-    </div>
- </div>
-</div>
     </script>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
