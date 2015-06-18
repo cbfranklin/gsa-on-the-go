@@ -11,10 +11,10 @@ function app() {
         apps: apps
     });
     $('#app-list').html(rendered_html);
-    $('body').on('click', '.btn-app-name', function(e) {
-        console.log('btn-app-name')
-        $(this).parent().toggleClass('open')
-        e.preventDefault()
+
+    Mousetrap.bind('enter', function(e) {
+        staffDirectorySearch();
+        return false;
     });
 
     router = new Grapnel();
@@ -120,11 +120,13 @@ function app() {
     router.get('/staff-directory', function(req) {
         $('section').hide();
         $('#staff-directory').show();
+        $('#staffDir-results-container').hide();
+        $('#staffDir-search-container').show();
+        $('#staffDir-load').hide();
 
 
 
         $('body').on('click', '#staffDir-search', staffDirectorySearch);
-        Mousetrap.bind(['enter'], staffDirectorySearch);
 
 
         $('body').on('click', '#staffDir-search-again', function() {
@@ -194,19 +196,24 @@ function staffDirectorySearch() {
             var results = data.gsaAssociate;
             console.log(results)
             if (results.length > 0) {
+                results = results.sort(function(a, b) {
+                    var sortNameA = a.lastName + ' ' + a.firstName;
+                    var sortNameB = b.lastName + ' ' + b.firstName;
+                    return sortNameA / toLowerCase().localeCompare(sortNameB.toLowerCase());
+                });
                 var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
                     results: results
                 });
                 $('#staffDir-results-container').html(staffdir_html);
             } else {
-                $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+                $('#staffDir-results-container').html('<div class="alert alert-warning" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
             }
             $('#staffDir-load').hide();
             $('#staffDir-results-container').show();
             window.scrollTo(0, 0);
         },
         error: function(data) {
-            $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
+            $('#staffDir-results-container').html('<div class="alert alert-warning" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
             $('#staffDir-load').hide();
             $('#staffDir-results-container').show();
             window.scrollTo(0, 0);
