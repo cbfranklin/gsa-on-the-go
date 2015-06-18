@@ -16,6 +16,7 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="lib/slick/slick.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="/lib/bootcards/css/bootcards-ios-lite.min.css" rel="stylesheet" type="text/css">
     <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -135,30 +136,23 @@
         </section>
         <section id="staff-directory">
             <div id="contact-gsa">
-                <h1>Contact GSA</h1>
-                <div id="searchSwitch" class="btn-group">
-                    <button id="staffDirectory" class="btn btn-default active">By Person</button>
-                    <button id="byTopic" class="btn btn-default">By Topic</button>
-                    <!--<button id="feedbackForm" class="btn">Feedback</button>-->
-                </div>
-                <br><br>
-                <div id="searches">
+                <h1>Staff Directory</h1>
                     <div class="well">
                             <div class="form-group">
-                                <label for="lastName" class="control-label">Last Name:</label>
-                                <input class="form-control" id="lastName" placeholder="" type="text">
+                                <label for="staffDirlastName" class="control-label">Last Name:</label>
+                                <input class="form-control" id="staffDir-lastName" placeholder="" type="text">
                             </div>
                                 <br>
                                  <div class="form-group">
-                                <label for="firstName" class="control-label">First Name:</label>
-                                <input class="form-control" id="firstName" placeholder="" type="text">
+                                <label for="staffDir-firstName" class="control-label">First Name:</label>
+                                <input class="form-control" id="staffDir-firstName" placeholder="" type="text">
                             </div>
                                 <br>
                                 <span class="help-inline"></span>
 
-                                <label for="lastName" class="control-label">State:</label>
-                                <select class="form-control" name="state" id="state">
-                                    <option value="none">Select a State</option>
+                                <label for="staffDir-state" class="control-label">State:</label>
+                                <select class="form-control" name="staffDir-state" id="staffDir-state">
+                                    <option value="">Select a State</option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -213,89 +207,21 @@
                                     <option value="WY">Wyoming</option>
                                 </select>
                                 <br>
-                                <label for="firstName" class="control-label">Zip Code:</label>
-                                <input  class="form-control" pattern="\d*" id="zip" placeholder="" type="text">
+                                <label for="staffDir-zip" class="control-label">Zip Code:</label>
+                                <input  class="form-control" pattern="\d*" id="staffDir-zip" placeholder="" type="text">
                                 <br>
                                 <span class="help-inline"></span>
-                        <button id="search" class="btn btn-primary btn-large btn-block">Search</button>
+                        <button id="staffDir-search" class="btn btn-primary btn-large btn-block">Search</button>
                         <br>
                         <button class="btn btn-block btn-default" type="reset">Reset</button>
                     </form>
-                </div>
-                    <form class="well byTopic" style="display:none">
-                        <label for="contactGroup" class="control-label">Search By Topic:</label>
-                                <!--<label for="contactGroup">Search by Topic:</label>-->
-                                <select class="form-control" id="contactGroup">
-                                    <option selected value="none">Select a Topic</option>
-                                    <option value="Aircraft%20Management%20Policy">Aircraft Management Policy</option>
-                                    <option value="Airline%20City%20Pairs">Airline City Pairs</option>
-                                    <option value="Area%20Property%20Officers">Area Property Officers</option>
-                                    <option value="Border%20Stations">Border Stations</option>
-                                    <option value="Build%20Green%20Coordinators">Build Green Coordinators</option>
-                                    <option value="Center%20for%20IT%20Schedule%20Programs">Center for IT Schedule Programs</option>
-                                    <option value="Child%20Care">Child Care</option>
-                                    <option value="Child%20Care%20Coordinators">Child Care Coordinators</option>
-                                    <option value="CHRIS">CHRIS</option>
-                                    <option value="Congressional%20Services%20Representatives">Congressional Services Representatives</option>
-                                    <option value="CONNECTIONS%20Customer%20Representatives">CONNECTIONS Customer Representatives</option>
-                                    <option value="Council%20Contacts">Council Contacts</option>
-                                    <option value="Customer%20Service%20Directors">Customer Service Directors</option>
-                                    <option value="Design%20Excellence%20Program">Design Excellence Program</option>
-                                    <option value="EEO%20Officers%20and%20Staff">EEO Officers and Staff</option>
-                                    <option value="Electronic%20Business%20Systems">Electronic Business Systems</option>
-                                    <option value="Energy%20Center%20of%20Expertise">Energy Center of Expertise</option>
-                                    <option value="Energy%20Regional%20Coordinators">Energy Regional Coordinators</option>
-                                    <option value="Enterprise%20GWAC%20Center%20(Southwest)">Enterprise GWAC Center (Southwest)</option>
-                                    <option value="Environmental">Environmental</option>
-                                    <option value="FEDDESK">FEDDESK</option>
-                                    <option value="Federal%20Vehicle%20Policy">Federal Vehicle Policy</option>
-                                    <option value="Fire%20Protection%20and%20Life%20Safety">Fire Protection and Life Safety</option>
-                                    <option value="FOIA">FOIA</option>
-                                    <option value="Governmentwide%20Employee%20Relocation%20Services">Governmentwide Employee Relocation Services</option>
-                                    <option value="Health%20and%20Safety">Health and Safety</option>
-                                    <option value="Historic%20Preservation">Historic Preservation</option>
-                                    <option value="Leasing">Leasing</option>
-                                    <option value="Local%20Courier%20Delivery%20Services">Local Courier Delivery Services</option>
-                                    <option value="Local%20Telecommunications%20Services">Local Telecommunications Services</option>
-                                    <option value="National%20Broker%20Contract">National Broker Contract</option>
-                                    <option value="National%20Environmental%20Policy%20Act%20(NEPA)%20Advisory%20Group">National Environmental Policy Act (NEPA) Advisory Group</option>
-                                    <option value="Office%20Relocation%20Services">Office Relocation Services</option>
-                                    <option value="Personal%20Property%20Management%20Division">Personal Property Management Division</option>
-                                    <option value="Personal%20Property%20Management%20Offices">Personal Property Management Offices</option>
-                                    <option value="Real%20Estate%20Services">Real Estate Services</option>
-                                    <option value="Real%20Property%20Management">Real Property Management</option>
-                                    <option value="Regional%20Emergency%20Coordinators">Regional Emergency Coordinators</option>
-                                    <option value="Regional%20Historic%20Preservation%20Officers">Regional Historic Preservation Officers</option>
-                                    <option value="Regional%20Urban%20Development%20Officers">Regional Urban Development Officers</option>
-                                    <option value="Regional%20WorkPlace%2020.20%20Advocates">Regional WorkPlace 20.20 Advocates</option>
-                                    <option value="Rental%20Supplemental%20Vehicles%20Program">Rental Supplemental Vehicles Program</option>
-                                    <option value="SDM%20Regional%20Program%20Managers">SDM Regional Program Managers</option>
-                                    <option value="Security%20Engineering">Security Engineering</option>
-                                    <option value="Seismic">Seismic</option>
-                                    <option value="Small%20Business%20GWAC%20Center">Small Business GWAC Center</option>
-                                    <option value="Small%20Business%20Support">Small Business Support</option>
-                                    <option value="Telework">Telework</option>
-                                    <option value="Transportation%20Policy">Transportation Policy</option>
-                                    <option value="Transportation,%20Delivery%20and%20Relocation%20Solutions">Transportation, Delivery and Relocation Solutions</option>
-                                    <option value="Travel%20and%20Transportation%20Training">Travel and Transportation Training</option>
-                                    <option value="Travel%20Management%20Policy">Travel Management Policy</option>
-                                    <option value="Travel%20Services%20Solutions">Travel Services Solutions</option>
-                                </select><br>
-                        <button id="groupSearch" class="btn btn-primary btn-large btn-block">Search</button>
-                    </form>
+                
 
                     
                 </div>
-                <div id="results">
-    </div>
+                <div id="results"></div>
                     <div id="load"></div>
-                    <h4 id="feedback" class="feedback"></h4>
-                    <hr>
-                    <ul class="addresses">
-                    </ul>
-                    <!--<ul class="nav nav-tabs nav-stacked prevSearches">
-    <h4>Previous Searches:</h4>
-    </ul>-->
+                    
                 </div>
                 
             </div>
@@ -360,6 +286,29 @@
     <hr>
     <a href="#" class="btn btn-info btn-block"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>Back</a>
     <hr> {{/app}}
+    </script>
+    <script type="template" class="staff-directory">
+        <div class="bootcards-list">
+  <div class="panel panel-default">
+    <div class="list-group">
+    {{#results}}
+      <a class="list-group-item" href="#">
+        <div class="row">
+          <div class="col-sm-6">
+            <i class="fa fa-3x fa-building-o pull-left"></i>
+            <h4 class="list-group-item-heading">{{lastName}},{{firstName}}</h4>
+            <p class="list-group-item-text">{{title}}</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="list-group-item-text">tel: <a href="tel:+1{{phoneNumber}}">{{phoneNumber}}</a></p>
+            <p class="list-group-item-text"><a href="mailto:{{emailAddress}}">{{emailAddress}}</a></p>
+          </div>
+        </div>
+      </a>
+      {{/results}}
+    </div>
+ </div>
+</div>
     </script>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
