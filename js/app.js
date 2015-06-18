@@ -176,11 +176,13 @@ function app() {
                     }
                     $('#staffDir-load').hide();
                     $('#staffDir-results-container').show();
+                    window.scrollTo(0, 0);
                 },
                 error: function(data) {
                     $('#staffDir-results-container').html('<div class="alert alert-danger" role="alert"> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Error:</span> No Results Found. </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>');
                     $('#staffDir-load').hide();
                     $('#staffDir-results-container').show();
+                    window.scrollTo(0, 0);
                 }
 
             })
