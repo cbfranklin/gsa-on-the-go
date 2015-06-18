@@ -147,8 +147,8 @@ function app() {
         $('.container').removeClass('nav-active')
     })
 
-    router.on('hashchange', function(event) {
-        console.log('hashchange')
+    router.on('navigate', function(event) {
+        console.log('navigate')
         if (window.location.hash.indexOf('undefined') === -1) {
             trackPageView();
         }
