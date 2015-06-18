@@ -169,6 +169,7 @@ function app() {
             });
         })
         $('body').on('click', '#staffDir-search-again', function() {
+            window.scrollTo(0,0);
             $('#staffDir-results-container').html('').hide();
             $('#staffDir-search-container input, #staffDir-search-container select').val('');
             $('#staffDir-search-container').show();
