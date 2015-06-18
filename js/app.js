@@ -135,13 +135,13 @@ function app() {
                 staffDirState = $('#staffDir-state').val(),
                 staffDirZip = $('#staffDir-zip').val();
 
-            if (staffDirLastName !== '') {
-                apiReq += '/ln/' + staffDirLastName;
-                reqSummary += ' ' + staffDirLastName;
-            }
             if (staffDirFirstName !== '') {
                 apiReq += '/fn/' + staffDirFirstName;
                 reqSummary += ' ' + staffDirFirstName;
+            }
+            if (staffDirLastName !== '') {
+                apiReq += '/ln/' + staffDirLastName;
+                reqSummary += ' ' + staffDirLastName;
             }
             if (staffDirState !== '') {
                 apiReq += '/st/' + staffDirState;
