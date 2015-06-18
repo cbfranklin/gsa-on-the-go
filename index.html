@@ -135,7 +135,7 @@
         <section id="staff-directory">
             <div id="contact-gsa">
                 <h1>Staff Directory</h1>
-                <div class="well">
+                <div id="staffDir-search-container" class="well">
                     <div class="form-group">
                         <label for="staffDirlastName" class="control-label">Last Name:</label>
                         <input class="form-control" id="staffDir-lastName" placeholder="" type="text">
@@ -213,7 +213,7 @@
                     <button class="btn btn-block btn-default" type="reset">Reset</button>
                     </form>
                 </div>
-                <div class="results bootcards-container"></div>
+                <div id="staffDir-results-container"></div>
                 <div class="load"></div>
             </div>
     </div>
@@ -297,6 +297,7 @@
             </div>
             {{/results}}
         </div>
+        <button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button>
     </script>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>

@@ -122,9 +122,8 @@ function app() {
         $('#staff-directory').show();
 
         $('body').on('click', '#staffDir-search', function() {
-            console.log('staffdirsearch')
-            //on search
-            //build req
+            $('#staffDir-search-container').hide();
+            $('#staffDir-load').show();
             //var GSARoot = 'http://m.gsa.gov';
             var GSARoot = 'http://dev.oagov.com:3000'
 
@@ -135,8 +134,6 @@ function app() {
                 staffDirLastName = $('#staffDir-lastName').val(),
                 staffDirState = $('#staffDir-state').val(),
                 staffDirZip = $('#staffDir-zip').val();
-
-                console.log(staffDirZip,staffDirState,staffDirFirstName,staffDirLastName)
 
             if (staffDirLastName !== '') {
                 apiReq += '/ln/' + staffDirLastName;
@@ -154,16 +151,21 @@ function app() {
                 apiReq += '/zip/' + staffDirZip;
                 reqSummary += ' ' + staffDirZip;
             }
-            console.log(apiReq)
             $.getJSON(apiReq, function(data) {
                 var results = data.gsaAssociate;
                 var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
                     results: results
                 });
-                $('#staff-directory .results').html(staffdir_html);
-
+                $('#staffDir-results-container').html(staffdir_html);
+                $('#staffDir-load').hide();
+                $('#staffDir-results-container').show();
             });
         })
+ $('body').on('click', '#staffDir-search-again', function() {
+    $('#staffDir-reults-container').hide();
+    $('#staffDir-search-container input, #staffDir-search-container select').val('');
+    $('#staffDir-search-container').show();
+ }
 
 
     })
