@@ -278,7 +278,7 @@
     <hr> {{/app}}
     </script>
     <script type="template" class="staff-directory">
-        <h3>Results:</h3>
+        <div class="alert alert-success" role="alert"> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Found {{length}} {{#singular}}result{{/singular}}{{^singular}}results{{/singular}} for <em>{{summary}}</em> </div><button id="staffDir-search-again" class="btn btn-primary btn-large btn-block">Search Again</button><br>
         <div class="list-group">
             {{#results}}
             <div class="list-group-item">

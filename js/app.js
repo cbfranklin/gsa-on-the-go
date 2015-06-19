@@ -59,7 +59,7 @@ function app() {
     /*router.get('/apps', function(req) {
         router.navigate('');
     })
-    router.get('undefined', function(req) {
+    router.get('*undefined', function(req) {
         router.navigate('');
     })*/
     router.get('/help', function(req) {
@@ -159,6 +159,7 @@ function app() {
 function staffDirectorySearch() {
     $('#staffDir-search-container').hide();
     $('#staffDir-load').show();
+    window.scrollTo(0, 0);
     //var GSARoot = 'http://m.gsa.gov';
     var GSARoot = 'http://dev.oagov.com:3000'
 
@@ -186,7 +187,6 @@ function staffDirectorySearch() {
         apiReq += '/zip/' + staffDirZip;
         reqSummary += ' ' + staffDirZip;
     }
-    console.log(reqSummary, apiReq)
 
 
     $.ajax({
@@ -194,15 +194,18 @@ function staffDirectorySearch() {
         dataType: "json",
         success: function(data) {
             var results = data.gsaAssociate;
-            console.log(results)
             if (results.length > 0) {
                 results = results.sort(function(a, b) {
                     var sortNameA = a.lastName + ' ' + a.firstName;
                     var sortNameB = b.lastName + ' ' + b.firstName;
                     return sortNameA.localeCompare(sortNameB);
                 });
+                if(results.length === 1) var singular = true;
                 var staffdir_html = Mustache.to_html($('#templates .staff-directory').html(), {
-                    results: results
+                    results: results,
+                    length: results.length,
+                    summary: reqSummary,
+                    singular: singular
                 });
                 $('#staffDir-results-container').html(staffdir_html);
             } else {
