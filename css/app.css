@@ -143,46 +143,7 @@ textarea {
     color: #263092;
 }
 
-.nav-secondary {
-    background: #263092;
-    color: #ededed;
-    overflow: hidden;
-}
 
-.nav-secondary > div {
-    display: none;
-    overflow: hidden;
-}
-
-.nav-secondary ul {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.nav-secondary li {
-    display: block;
-    float: left;
-    list-style: none;
-    width: 33%;
-    text-align: center;
-    height: 40px;
-    padding-top: 20px;
-    position: relative;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.nav-secondary li:hover {
-    background: #263092;
-}
-
-.nav-secondary a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
 
 .menu-toggle {
     display: none;
@@ -254,7 +215,7 @@ nav ul {
     width: 100%;
     height: 50px;
     border: none;
-    border-bottom: 1px solid #263092;
+    border-bottom: 1px solid #2E6EA5;
 }
 
 .nav-primary li a {
@@ -267,28 +228,7 @@ nav ul {
     display: none;
 }
 
-.nav-secondary li {
-    width: 100%;
-    border-bottom: 1px solid #263092;
-}
 
-.nav-secondary {
-    position: fixed;
-    top: 60px;
-    width: 290px;
-    height: 100%;
-    left: -300px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    z-index: 1002;
-}
-
-.nav-secondary.active {
-    left: 0px;
-}
 
 .drawer-open .hero {
     background: #2D86DB;
@@ -311,20 +251,13 @@ nav ul {
     color: #fff;
 }
 
-.nav-secondary li::after {
-    content: '\25B6';
-    position: absolute;
-    top: 18px;
-    right: 10px;
-    color: #263092;
-}
 
 .nav-primary li::before {
     content: '\25B6';
     position: absolute;
     top: 13px;
     right: 10px;
-    color: #263092;
+    color: #296394;
     width: auto;
     height: auto;
     border: none;
@@ -334,9 +267,7 @@ nav ul {
     color: #fff;
 }
 
-.nav-secondary li:hover::after {
-    color: #337AB7;
-}
+
 
 .menu-toggle {
     width: 30px;
@@ -443,7 +374,7 @@ a:hover {
     display: block;
 }
 
-hr{
+#app-list-page hr{
     margin-top:10px;
     margin-bottom:10px;
 }
@@ -726,6 +657,16 @@ hr{
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
+}
+
+/* OWL OVERRIDES */
+.owl-theme .owl-controls{
+    margin-top:0px;
+}
+.owl-theme .owl-controls .owl-page span{
+    height:7px;
+    width:7px;
+    margin:0px 4px;
 }
 
 #swipe-list,

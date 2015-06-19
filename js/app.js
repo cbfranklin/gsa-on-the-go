@@ -4,6 +4,13 @@ var gaDimensions = {};
 
 function app() {
 
+    $('body').on('click', '.container.nav-active', function(event) {
+        $('nav,.menu-toggle').removeClass('active');
+        $('.container').removeClass('nav-active')
+        event.stopPropagation()
+        event.preventDefault()
+    })
+
 
     platformSpecific();
 
@@ -19,6 +26,8 @@ function app() {
 
     router = new Grapnel();
     router.get('', function(req) {
+        $('nav,.menu-toggle').removeClass('active');
+        $('.container').removeClass('nav-active')
         var title = 'GSA On The Go';
         document.title = title;
         $('section').hide();
@@ -142,13 +151,11 @@ function app() {
 
     })
 
-    $('body').on('click', '.container.nav-active', function() {
-        $('nav,.menu-toggle').removeClass('active');
-        $('.container').removeClass('nav-active')
-    })
+    
 
     router.on('navigate', function(event) {
         console.log('navigate')
+        window.scrollTo(0, 0);
         if (window.location.hash.indexOf('undefined') === -1) {
             trackPageView();
         }
