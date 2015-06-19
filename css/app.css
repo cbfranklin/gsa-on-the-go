@@ -661,7 +661,7 @@ a:hover {
 
 /* OWL OVERRIDES */
 .owl-theme .owl-controls{
-    margin-top:-10px;
+    margin-top:0px;
 }
 .owl-theme .owl-controls .owl-page span{
     height:7px;
