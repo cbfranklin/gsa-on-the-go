@@ -18,7 +18,8 @@ var apps = [
 		"display-name":"ALOHA*",
 		"icon":"img/icons/aloha.jpg",
 		"link":"http://aloha.gsa.gov/",
-		"type":"site"
+		"type":"site",
+		"instructions":true
 	},
 	{
 		"name":"employee-express",
