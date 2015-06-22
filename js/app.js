@@ -19,10 +19,10 @@ function app() {
     });
     $('#app-list').html(rendered_html);
 
-    Mousetrap.bind('enter', function(e) {
+    /*Mousetrap.bind('enter', function(e) {
         staffDirectorySearch();
         e.preventDefault();
-    });
+    });*/
 
     router = new Grapnel();
     router.get('', function(req) {
