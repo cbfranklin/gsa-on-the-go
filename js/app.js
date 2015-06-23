@@ -120,7 +120,7 @@ function app() {
         }
 
         $('#app-info-page').html(rendered_html);
-        var req = 'app-info/' + findByName[0].name + '.html';
+        var req = 'data/app-info/' + findByName[0].name + '.html';
         $('.app-info-body').load(req);
         var title = findByName[0]['display-name'] + ' | GSA On The Go';
         document.title = title;
