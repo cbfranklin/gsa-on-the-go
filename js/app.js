@@ -167,8 +167,7 @@ function staffDirectorySearch() {
     $('#staffDir-search-container').hide();
     $('#staffDir-load').show();
     window.scrollTo(0, 0);
-    //var GSARoot = 'http://m.gsa.gov';
-    var GSARoot = 'http://dev.oagov.com:3000'
+    var GSARoot = 'http://m.gsa.gov';
 
     var staffDirBaseURL = GSARoot + '/api/rs/a',
         apiReq = staffDirBaseURL,
