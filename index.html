@@ -66,7 +66,7 @@
         </section>
         <section id="app-info-page">
         </section>
-        <section id="help-page"  class="animated fadeIn">
+        <section id="help-page" class="animated fadeIn">
             <h2>Help Lines &amp; Support</h2>
             <br>
             <table class="table table-striped table-bordered">
@@ -118,7 +118,7 @@
         </section>
         <section id="mobile-vpn" class="animated fadeIn">
             <h2>Set Up Mobile VPN</h2>
-            <p>A mobile VPN is required in order to access secure sites such as ALOHA and FedDesk. Please download both the <a href="#/apps/anyconnect">AnyConnect VPN client</a> and the <a href="#/apps/secureauth-otp">SecureAuth one-time password generator</a> to access the GSA network.</p>
+            <p>A mobile VPN is required in order to access secure sites such as ALOHA and FedDesk. Please download both the <a href="#/apps/anyconnect">AnyConnect VPN client</a> and the <a href="#/apps/secureauth-otp">SecureAuth one-time password generator</a>                to access the GSA network.</p>
             <div class="row">
                 <div class="col-xs-6 col-sm-3 col-sm-offset-3 mobile-vpn-app">
                     <a href="#/apps/anyconnect"><img class="icon" src="img/icons/anyconnect_cropped.png">
@@ -131,21 +131,21 @@
             </div>
         </section>
         <section id="staff-directory" class="animated fadeIn">
-                <h2>Staff Directory</h2>
-                <div id="staffDir-search-container" class="well">
-                    <div class="form-group">
-                        <label for="staffDirlastName" class="control-label">Last Name:</label>
-                        <input class="form-control" id="staffDir-lastName" placeholder="" type="text">
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="staffDir-firstName" class="control-label">First Name:</label>
-                        <input class="form-control" id="staffDir-firstName" placeholder="" type="text">
-                    </div>
-                    <br>
-                    <span class="help-inline"></span>
-                    <label for="staffDir-state" class="control-label">State:</label>
-                    <select class="form-control" name="staffDir-state" id="staffDir-state">
+            <h2>Staff Directory</h2>
+            <div id="staffDir-search-container" class="well">
+                <div class="form-group">
+                    <label for="staffDirlastName" class="control-label">Last Name:</label>
+                    <input class="form-control" id="staffDir-lastName" placeholder="" type="text">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="staffDir-firstName" class="control-label">First Name:</label>
+                    <input class="form-control" id="staffDir-firstName" placeholder="" type="text">
+                </div>
+                <br>
+                <span class="help-inline"></span>
+                <label for="staffDir-state" class="control-label">State:</label>
+                <select class="form-control" name="staffDir-state" id="staffDir-state">
                         <option value="">Select a State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -200,18 +200,18 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
-                    <br>
-                    <label for="staffDir-zip" class="control-label">Zip Code:</label>
-                    <input class="form-control" pattern="\d*" id="staffDir-zip" placeholder="" type="text">
-                    <br>
-                    <span class="help-inline"></span>
-                    <button id="staffDir-search" class="btn btn-primary btn-large btn-block">Search</button>
-                    <br>
-                    </form>
-                </div>
-                <div id="staffDir-results-container"></div>
-                <div style="display:none" id="staffDir-load"></div>
+                <br>
+                <label for="staffDir-zip" class="control-label">Zip Code:</label>
+                <input class="form-control" pattern="\d*" id="staffDir-zip" placeholder="" type="text">
+                <br>
+                <span class="help-inline"></span>
+                <button id="staffDir-search" class="btn btn-primary btn-large btn-block">Search</button>
+                <br>
+                </form>
             </div>
+            <div id="staffDir-results-container"></div>
+            <div style="display:none" id="staffDir-load"></div>
+    </div>
     </section>
     </div>
     </div>
@@ -257,7 +257,7 @@
                         <h3><a target="_blank" href="{{link-download-platform}}">{{display-name}}</a></h3></div>
                 </div>
                 <hr>
-                <a data-app-string="{{name}}-{{platform}}" target="_blank" href="{{link-download-platform}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a> {{/link-download-platform}} {{^link-download-platform}}
+                <a data-app-string="{{name}}-{{platform}}" target="_blank" href="{{link-download-platform}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Download</a>                {{/link-download-platform}} {{^link-download-platform}}
                 <div class="col-xs-3 col-sm-2 col-md-1">
                     <img class="icon" src="{{icon}}">
                 </div>
@@ -266,7 +266,7 @@
             </div>
             <hr>
             <a data-app-string="{{name}}-apple" target="_blank" href="{{link-download.apple}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Apple App Store</a>
-            <a data-app-string="{{name}}-android" target="_blank" href="{{link-download.android}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Google Play Store</a> {{/link-download-platform}}
+            <a data-app-string="{{name}}-android" target="_blank" href="{{link-download.android}}" class="gtm-app-download-intent btn btn-success btn-block"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>Google Play Store</a>            {{/link-download-platform}}
     </div>
     <hr>
     <div class="app-info-body"></div>
@@ -281,13 +281,14 @@
             <div class="list-group-item">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h4 class="list-group-item-heading">{{lastName}}, {{firstName}}</h4>
-                        {{#title}}<p class="list-group-item-text">{{title}}</p>{{/title}}
+                        <h4 class="list-group-item-heading">{{lastName}}, {{firstName}}</h4> {{#title}}
+                        <p class="list-group-item-text">{{title}}</p>{{/title}}
                     </div>
-                    <hr class="visible-xs"/>
+                    <hr class="visible-xs" />
                     <div class="col-sm-6">
-                        {{#phoneNumber}}<p><a href="tel:+1{{phoneNumber}}"><span class="glyphicon glyphicon-earphone"></span> {{phoneNumber}}</a></p>{{/phoneNumber}}
-                        {{#emailAddress}}<p><a href="mailto:{{emailAddress}}"><span class="glyphicon glyphicon-envelope"></span> {{emailAddress}}</a></p>{{/emailAddress}}
+                        {{#phoneNumber}}
+                        <p><a href="tel:+1{{phoneNumber}}"><span class="glyphicon glyphicon-earphone"></span> {{phoneNumber}}</a></p>{{/phoneNumber}} {{#emailAddress}}
+                        <p><a href="mailto:{{emailAddress}}"><span class="glyphicon glyphicon-envelope"></span> {{emailAddress}}</a></p>{{/emailAddress}}
                     </div>
                 </div>
             </div>
@@ -306,14 +307,14 @@
     <script src="js/navigation.js"></script>
     <script src="js/app.js"></script>
     <script>
-    $(function() {
-        navigation();
-        app();
-        trackPageView();
-    });
+        $(function() {
+            navigation();
+            app();
+            //trackPageView();
+        });
     </script>
     <!-- Google Tag Manager -->
-    <noscript>
+    <!-- <noscript>
         <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WPXDXZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <script>
@@ -331,7 +332,7 @@
             '//www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-WPXDXZ');
-    </script>
+    </script> -->
     <!-- End Google Tag Manager -->
 </body>
 

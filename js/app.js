@@ -6,10 +6,10 @@ function app() {
 
     $('body').on('click', '.container.nav-active', function(event) {
         $('nav,.menu-toggle').removeClass('active');
-        $('.container').removeClass('nav-active')
-        event.stopPropagation()
-        event.preventDefault()
-    })
+        $('.container').removeClass('nav-active');
+        event.stopPropagation();
+        event.preventDefault();
+    });
 
 
     platformSpecific();
@@ -27,21 +27,21 @@ function app() {
     router = new Grapnel();
     router.get('', function(req) {
         $('nav,.menu-toggle').removeClass('active');
-        $('.container').removeClass('nav-active')
+        $('.container').removeClass('nav-active');
         var title = 'GSA On The Go';
         document.title = title;
         $('section').hide();
         if ($('#swipe-list-apps').is(':empty')) {
             var list_sites = apps.filter(function(obj) {
                 return obj['type'] === 'site';
-            })
+            });
             var list_apps = apps.filter(function(obj) {
                 return obj['type'] === 'app';
-            })
+            });
             var list_google = apps.filter(function(obj) {
                 return obj['type'] === 'google';
-            })
-            var swipeTemplate = $('#templates .swipe-list').html()
+            });
+            var swipeTemplate = $('#templates .swipe-list').html();
 
             var rendered_list_apps = Mustache.to_html(swipeTemplate, {
                 apps: list_apps
@@ -76,7 +76,7 @@ function app() {
         $('#help-page').show();
         var title = 'Help Lines & Support | GSA On The Go';
         document.title = title;
-    })
+    });
     router.get('/feedback', function(req) {
         $('section').hide();
         $('#feedback').show();
@@ -84,23 +84,23 @@ function app() {
             router.navigate('/thankyou');
             setTimeout(function() {
                 $('.google-form textarea').val('');
-            }, 1000)
+            }, 1000);
         });
         var title = 'Feedback | GSA On The Go';
         document.title = title;
-    })
+    });
     router.get('/thankyou', function(req) {
         $('section').hide();
         $('#thankyou').show();
         var title = 'Thank You | GSA On The Go';
         document.title = title;
-    })
+    });
     router.get('/mobile-vpn', function(req) {
         $('section').hide();
         $('#mobile-vpn').show();
         var title = 'Mobile VPN | GSA On The Go';
         document.title = title;
-    })
+    });
     router.get('/apps/:name', function(req) {
         $('section').hide();
         $('#app-info-page').show();
@@ -109,12 +109,13 @@ function app() {
             return e.name == appName;
         });
         var appData = findByName[0];
+        var rendered_html;
         if (appData.type === 'site') {
-            var rendered_html = Mustache.to_html($('#templates .site-info').html(), {
+            rendered_html = Mustache.to_html($('#templates .site-info').html(), {
                 app: appData
             });
         } else {
-            var rendered_html = Mustache.to_html($('#templates .app-info').html(), {
+            rendered_html = Mustache.to_html($('#templates .app-info').html(), {
                 app: appData
             });
         }
@@ -149,16 +150,16 @@ function app() {
         });
 
 
-    })
+    });
 
-    
+
 
     router.on('navigate', function(event) {
-        console.log('navigate')
+        // console.log('navigate')
         window.scrollTo(0, 0);
-        if (window.location.hash.indexOf('undefined') === -1) {
-            trackPageView();
-        }
+        // if (window.location.hash.indexOf('undefined') === -1) {
+        //     trackPageView();
+        // }
     });
 
 }
@@ -228,7 +229,7 @@ function staffDirectorySearch() {
             window.scrollTo(0, 0);
         }
 
-    })
+    });
 }
 
 function trackPageView() {
@@ -237,7 +238,7 @@ function trackPageView() {
     if (typeof ga !== "undefined") {
         ga('send', 'pageview', gaCrumb + hash, null, document.title);
     } else {
-        console.log('send', 'pageview', gaCrumb + hash, null, document.title)
+        // console.log('send', 'pageview', gaCrumb + hash, null, document.title)
     }
 }
 
